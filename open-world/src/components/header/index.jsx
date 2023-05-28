@@ -16,7 +16,7 @@ export default function Header() {
           />
           <span className="main-header__logo-name">OpenWorld</span>
         </div>
-        {!user ? (
+        {user ? (
           <button>Log in</button>
         ) : (
           <>

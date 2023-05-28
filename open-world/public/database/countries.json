@@ -1,0 +1,69 @@
+[
+    {
+        "countryId": 1,
+        "name": "Vietnam",
+        "countryDescription": "Vietnam is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
+        "backgroundImage": "./images/countries/vietnam/background.png",
+        "bestTours": [
+            {
+                "tourName": "Chin Gip,Vietnam",
+                "reviews": 5, 
+                "image": "./images/countries/vietnam/chin-gip.png"
+            },
+            {
+                "tourName": "Duck Lak,Vietnam",
+                "reviews": 5, 
+                "image": "./images/countries/vietnam/duck-lak.png"
+            },
+            {
+                "tourName": "Chanhoi,Vietnam",
+                "reviews": 4, 
+                "image": "./images/countries/vietnam/chanhoi.png"
+            },
+            {
+                "tourName": "Hoshimi,Vietnam",
+                "reviews": 5, 
+                "image": "./images/countries/vietnam/hoshimi.png"
+            },
+            {
+                "tourName": "Da Nang,Vietnam",
+                "reviews": 4, 
+                "image": "./images/countries/vietnam/da-nang.png"
+            }
+        ]
+    },
+    {
+        "countryId": 2,
+        "name": "Japan",
+        "countryDescription": "Japan is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
+        "backgroundImage": "./images/countries/japan/background.png",
+        "bestTours": [
+            {
+                "tourName": "Chinso,Vietnam",
+                "reviews": 5, 
+                "image": "./images/countries/japan/chinso.png"
+            },
+            {
+                "tourName": "Fuji,Japan",
+                "reviews": 5, 
+                "image": "./images/countries/japan/fuji.png"
+            },
+            {
+                "tourName": "Chanhoi,Japan",
+                "reviews": 4, 
+                "image": "./images/countries/japan/chanhoi.png"
+            },
+            {
+                "tourName": "Hoshimi,Japan",
+                "reviews": 5, 
+                "image": "./images/countries/japan/hoshimi.png"
+            },
+            {
+                "tourName": "Tochigi,Japan",
+                "reviews": 4, 
+                "image": "./images/countries/japan/tochigi.png"
+            }
+        ]
+    }
+]
+  
