@@ -6,6 +6,7 @@
 .pnp.js
 
 # testing
+*package-lock.json
 /coverage
 
 # production

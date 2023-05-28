@@ -1,5 +1,5 @@
 import SearchForm from "../searchForm";
-
+import { Button } from "../Button";
 export default function Header() {
   const user = localStorage.getItem("user");
 
@@ -16,15 +16,19 @@ export default function Header() {
           />
           <span className="main-header__logo-name">OpenWorld</span>
         </div>
-        {user ? (
-          <button>Log in</button>
+        {!user ? (
+          <Button
+            text="Log in"
+            border="2px solid #FEFEFE"
+            color="#ffffff"
+            backgroundColor="transparent"
+          />
         ) : (
           <>
             <div className="main-header__nav">
               <a
                 href="#"
-                className="main-header__nav-link main-header__nav-link--accent"
-              >
+                className="main-header__nav-link main-header__nav-link--accent">
                 Home
               </a>
               <a href="#" className="main-header__nav-link">
