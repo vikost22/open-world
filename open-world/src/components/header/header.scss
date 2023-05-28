@@ -1,0 +1,43 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding-top: 36px;
+  padding-bottom: 10px;
+  &__container {
+    @include mixins.flex(row, space-between, start, wrap);
+  }
+}
+// Logo
+.main-header__logo {
+  @include mixins.flex(row, start, center, nowrap);
+  column-gap: 8px;
+  & .main-header__logo-name {
+    @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
+  }
+}
+// Nav
+.main-header__nav {
+  @include mixins.flex(row, start, center, nowrap);
+  column-gap: 56px;
+}
+
+.main-header__nav-link {
+  @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
+}
+.main-header__nav-link--accent {
+  color: $accentColor;
+}
+
+// User
+.user-menu {
+  @include mixins.flex(row, start, center, wrap);
+  column-gap: 41px;
+}
+
+
+.user-menu__account {
+  @include mixins.flex(row, start, center, nowrap);
+  column-gap: 24px;
+}
