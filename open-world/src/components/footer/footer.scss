@@ -1,0 +1,34 @@
+.main-footer {
+  padding-top: 48px;
+  padding-bottom: 55px;
+  background-color: $colorFooter;
+  &__logo {
+    @include mixins.flex(row, start, center, nowrap);
+    column-gap: 8px;
+  }
+
+  &__logo-name {
+    @include mixins.textStyle(20px, 24px, 400, $textColorWhite);
+  }
+  &__container {
+    @include mixins.flex(row, space-between, start, wrap);
+    row-gap: 15px;
+  }
+  &__footer-links {
+    @include mixins.flex(row, center, start, wrap);
+    column-gap: 72px;
+    row-gap: 15px;
+  }
+  &__links-title {
+    @include mixins.textStyle(16px, 24px, 500, $additionalColor);
+    margin-bottom: 24px;
+  }
+  &__link {
+    @include mixins.textStyle(16px, 24px, 400, $additionalColor);
+    margin-bottom: 8px;
+  }
+}
+
+.social-networks__link{
+    margin-left: 16px;
+}

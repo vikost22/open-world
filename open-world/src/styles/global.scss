@@ -27,6 +27,15 @@ html {
 }
 body {
   font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
+  position: relative;
+  background-color: #393939;
 }
+
+.container {
+  @include mixins.marginCenter;
+  max-width: 1440px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@import url("../components/Button/index.scss");
+@import url("../components/Title/index.scss");

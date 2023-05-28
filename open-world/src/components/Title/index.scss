@@ -1,0 +1,30 @@
+.title-section {
+  background: url("../../img/title_page/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 150px;
+}
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+}
+.title-slogan {
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 88px;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  -webkit-text-stroke: 3px #fff;
+  -webkit-text-fill-color: transparent;
+}
+.field--text {
+  -webkit-text-fill-color: #ffffff;
+}
