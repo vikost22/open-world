@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 7%;
+  left: 51px;
   @include mixins.flex(column, start, center, wrap);
   row-gap: 38px;
 }

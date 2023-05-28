@@ -1,10 +1,17 @@
+import Header from './components/header';
+import { Routes, Route } from "react-router-dom";
+import { ChooseCountry } from './pages';
 import { Title } from "./components/Title";
-import Header from "./components/header";
+
 function App() {
   return (
     <>
-      <Header />
-      <Title />
+    <Header/>
+    <Routes>
+      <Route path='/' element={<Title/>}/>
+      <Route path='/country' element={<ChooseCountry/>}/>
+    </Routes>
+
     </>
   );
 }
