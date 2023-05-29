@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 168px;
+  transition-duration: 500ms;
   &__info {
     margin-left: 152px;
   }
@@ -15,7 +16,7 @@
 }
 
 .country-choise__choose {
-  @include mixins.flex(row, start, center, wrap);
+  @include mixins.flex(row, flex-start, center, wrap);
   margin-top: 12px;
   position: relative;
 }

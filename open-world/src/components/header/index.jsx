@@ -1,11 +1,12 @@
 import SearchForm from "../searchForm";
 import { Button } from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 export default function Header() {
   const user = localStorage.getItem("user");
-
+  const location = useLocation();
+  if (location.pathname==="/login") return
   return (
-    <header className="main-header">
+    <header className="main-header ">
       <div className="container main-header__container">
         <div className="main-header__logo">
           <img

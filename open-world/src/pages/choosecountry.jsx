@@ -5,7 +5,7 @@ export function ChooseCountry() {
   return (
     <>
       <CountriesChoise />
-      <StatusRoader statusNumber={3} statusName="Choose a country" />
+      
     </>
   );
 }

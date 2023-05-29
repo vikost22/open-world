@@ -1,9 +1,8 @@
 .status-roader {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   left: 51px;
-  @include mixins.flex(column, start, center, wrap);
+  @include mixins.flex(column, flex-start, center, wrap);
   row-gap: 38px;
 }
 .roads {
