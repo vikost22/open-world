@@ -1,5 +1,6 @@
 import SearchForm from "../searchForm";
 import { Button } from "../Button";
+import { Link } from "react-router-dom";
 export default function Header() {
   const user = localStorage.getItem("user");
 
@@ -17,12 +18,15 @@ export default function Header() {
           <span className="main-header__logo-name">OpenWorld</span>
         </div>
         {!user ? (
-          <Button
-            text="Log in"
-            border="2px solid #FEFEFE"
-            color="#ffffff"
-            backgroundColor="transparent"
-          />
+          <Link to="/login">
+            <Button
+              text="Log in"
+              border="2px solid #FEFEFE"
+              color="#ffffff"
+              backgroundColor="transparent"
+              padding="4px 20px"
+            />
+          </Link>
         ) : (
           <>
             <div className="main-header__nav">

@@ -3,7 +3,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  min-width: 100vw;
   padding-top: 36px;
   padding-bottom: 10px;
   &__container {
@@ -36,7 +36,6 @@
   @include mixins.flex(row, start, center, wrap);
   column-gap: 41px;
 }
-
 
 .user-menu__account {
   @include mixins.flex(row, start, center, nowrap);

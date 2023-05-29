@@ -1,5 +1,5 @@
 .title-section {
-  background: url("../../img/title_page/main-background.png");
+  background: url("../../../public/images/title_page/main-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -8,20 +8,14 @@
   padding-top: 150px;
 }
 .title-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  @include mixins.flex(column, center, flex-end, wrap);
   gap: 40px;
 }
 .title-slogan {
+  @include mixins.textStyle(80px, 88px, 500, "#ffffff");
   text-transform: uppercase;
-  font-size: 80px;
-  font-weight: 500;
-  line-height: 88px;
   letter-spacing: -0.02em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  @include mixins.flex(column, center, flex-end, wrap);
   -webkit-text-stroke: 3px #fff;
   -webkit-text-fill-color: transparent;
 }

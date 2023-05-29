@@ -1,0 +1,174 @@
+.login-section {
+  background: url("../../../public/images/login_page/loginBack.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-width: 100vw;
+  color: $textColorWhite;
+  padding-top: 40px;
+}
+.login-form__wrapper {
+  box-sizing: border-box;
+  padding: 50px 60px;
+  max-width: 650px;
+  @include mixins.marginCenter;
+  background: rgba(85, 54, 54, 0.11);
+  box-shadow: 1px 1px 15px rgba(61, 61, 61, 0.61);
+  border-radius: 20px;
+}
+.form__validation {
+  margin-top: 15px;
+  @include mixins.textStyle(20px, 20px, 500, #ff0000);
+}
+.login__title {
+  @include mixins.textStyle(24px, 20px, 500, inherit);
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 15px;
+    width: 100px;
+    border: 2px solid $accentColor;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+}
+.login__description {
+  @include mixins.textStyle(13px, 20px, 500, #bfbfbf);
+}
+.login-form {
+  @include mixins.flex(column, flex-start, flex-start, nowrap);
+}
+.login-input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid $textColorWhite;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  color: $textColorWhite;
+  &:focus {
+    color: $textColorWhite;
+  }
+  &::before {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid $textColorWhite;
+  }
+}
+.form-label {
+  position: relative;
+  padding-left: 15px;
+  padding: 30px;
+  @include mixins.textStyle(10px, 14px, 500, $textColorWhite);
+}
+.email--label::before {
+  content: "";
+  background: url("../../../public/images/login_page/emailSvg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 12px;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+}
+.pass--label::before {
+  content: "";
+  background: url("../../../public/images/login_page/passSvg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 14px;
+  height: 18px;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+}
+.forgot__wrapper {
+  width: 100%;
+  @include mixins.flex(row, space-between, center, nowrap);
+}
+.keep--sign {
+  position: absolute;
+  top: -9999px;
+}
+.sign--label {
+  display: block;
+  padding-left: 0;
+  cursor: pointer;
+}
+.sign--label.active {
+  &::before {
+    content: "";
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: right;
+    background-color: #66cc66;
+  }
+}
+.sign--label::before {
+  content: "";
+  width: 40px;
+  height: 20px;
+  background-image: url("../../../public/images/login_page/keepSign.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: #737373;
+  border-radius: 16px;
+  transition: 0.6s;
+}
+.forgot--link {
+  @include mixins.textStyle(13px, 16px, 500, $accentColor);
+  transition: 0.4s;
+  &:hover {
+    color: darken($accentColor, 40%);
+  }
+}
+.btn__wrapper {
+  margin-top: 20px;
+  @include mixins.flex(column, center, center, nowrap);
+  @include mixins.marginCenter;
+  gap: 20px;
+}
+.form-btn {
+  @include mixins.textStyle(16px, 20px, 500, #1e1e1e);
+  border-radius: 12px;
+  transition: 0.5s;
+}
+.submit--btn {
+  background: $accentColor;
+  padding: 8px 100px;
+  &:hover {
+    background: darken($accentColor, 50%);
+    color: $textColorWhite;
+  }
+}
+.google--sign {
+  background-color: #fefefe;
+  padding: 8px 32px;
+  &:hover {
+    background-color: darken(#fefefe, 50%);
+    color: $textColorWhite;
+  }
+}
+.google--sign::after {
+  content: "";
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+  background-image: url("../../../public/images/login_page/gmailSvg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+}
