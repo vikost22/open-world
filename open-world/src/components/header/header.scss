@@ -14,9 +14,11 @@
 .main-header__logo {
   @include mixins.flex(row, flex-start, center, nowrap);
   column-gap: 8px;
-  & .main-header__logo-name {
-    @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
-  }
+  cursor: pointer;
+}
+.main-header__logo-name {
+  @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
+  user-select: none;
 }
 // Nav
 .main-header__nav {
