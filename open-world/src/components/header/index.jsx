@@ -1,32 +1,36 @@
 import SearchForm from "../searchForm";
 import { Button } from "../Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 export default function Header() {
   const user = localStorage.getItem("user");
-
+  const location = useLocation();
   return (
     <header className="main-header">
       <div className="container main-header__container">
         <div className="main-header__logo">
-          <img
-            src="./images/icons/header/header-logo.svg"
-            width="29"
-            height="32"
-            alt="logo"
-            className="main-header__logo-icon"
-          />
-          <span className="main-header__logo-name">OpenWorld</span>
+          <Link to={"/"}>
+            <img
+              src="./images/icons/header/header-logo.svg"
+              width="29"
+              height="32"
+              alt="logo"
+              className="main-header__logo-icon"
+            />
+            <span className="main-header__logo-name">OpenWorld</span>
+          </Link>
         </div>
         {!user ? (
-          <Link to="/login">
-            <Button
-              text="Log in"
-              border="2px solid #FEFEFE"
-              color="#ffffff"
-              backgroundColor="transparent"
-              padding="4px 20px"
-            />
-          </Link>
+          location.pathname !== "/login" && (
+            <Link to="/login">
+              <Button
+                text="Log in"
+                border="2px solid #FEFEFE"
+                color="#ffffff"
+                backgroundColor="transparent"
+                padding="4px 20px"
+              />
+            </Link>
+          )
         ) : (
           <>
             <div className="main-header__nav">

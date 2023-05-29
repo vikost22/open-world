@@ -97,6 +97,12 @@ export function LoginForm() {
               </button>
             </div>
           </form>
+          <p className="login-create">
+            Don`t have an account?{" "}
+            <a href="#" className="login-create create--link">
+              Create a new account
+            </a>
+          </p>
         </div>
       </div>
     </motion.section>

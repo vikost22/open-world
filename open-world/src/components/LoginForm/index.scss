@@ -173,3 +173,15 @@
   width: 22px;
   height: 22px;
 }
+.login-create {
+  margin-top: 50px;
+  text-align: center;
+  @include mixins.textStyle(15px, 20px, 500, #fefefe);
+}
+.create--link {
+  margin-left: 10px;
+  color: #4686e4;
+  &:hover {
+    color: darken(#4686e4, 20%);
+  }
+}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../Button";
 import StatusRoader from "../StatusRoader";
 import { motion } from "framer-motion";
@@ -19,13 +20,15 @@ export function Title() {
             <span className="title-slogan field--text">AND</span>
             TRAVEL
           </h1>
-          <Button
-            text="Started"
-            backgroundColor="#F0E33F"
-            color="#000000"
-            border="none"
-            padding="4px 55px"
-          />
+          <Link to={"/continent"}>
+            <Button
+              text="Started"
+              backgroundColor="#F0E33F"
+              color="#000000"
+              border="none"
+              padding="4px 55px"
+            />
+          </Link>
           <StatusRoader statusNumber={1} statusName="Started" />
         </div>
       </div>

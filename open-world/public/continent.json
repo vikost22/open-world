@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Asia",
+    "background": "./images/continent/Asia/asiaBack.png",
+    "text": "Asia is a continent with a rich culture and diverse natural attractions, from hot deserts and tropical forests to snowy mountain .",
+    "tours": [
+      "./images/continent/Asia/secondTour.png",
+      "./images/continent/Asia/firstTour.png",
+      "./images/continent/Asia/thirdTour.png"
+    ],
+    "toursPlace": ["Tian Shan,China", "Tottori,Japan", "Duck Lak,Vietnam"],
+    "toursStars": [4, 5, 5]
+  },
+  {
+    "name": "Australia",
+    "background": "./images/continent/Australia/australiaBack.png",
+    "text": "Australia is a vast and diverse country known for its stunning natural beauty, vibrant cities, unique wildlife, and a relaxed way of life.",
+    "tours": [
+      "./images/continent/Australia/australiaFirst.png",
+      "./images/continent/Australia/australiaSecond.png",
+      "./images/continent/Australia/australiaThird.png"
+    ],
+    "toursPlace": [
+      "Sydney,Australia",
+      "Lincoln Rock,Australia",
+      "Springbrook,Australia"
+    ],
+    "toursStars": [5, 5, 5]
+  }
+]
