@@ -1,0 +1,33 @@
+.tour {
+  position: relative;
+}
+.tour-xl {
+  .tour__fav {
+    top: 16px;
+    right: 16px;
+  }
+  .tour__image {
+    width: 203px;
+    height: 330px;
+  }
+}
+.tour__fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.tour__image {
+  border-radius: 16px;
+}
+
+.tour__name {
+  @include mixins.textStyle(16px, 19px, 400, $textColorWhite);
+  margin-top: 12px;
+}
+
+.tour__stars {
+  display: flex;
+  column-gap: 4px;
+  margin-top: 4px;
+}

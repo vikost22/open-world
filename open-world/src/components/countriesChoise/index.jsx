@@ -3,6 +3,7 @@ import axios from "axios";
 import CountrySearch from "../countrySearch";
 import { motion } from "framer-motion";
 import StatusRoader from "../StatusRoader";
+import TourItem from "../TourItem";
 
 export default function CountriesChoise() {
   const [country, setCountry] = useState({});
@@ -29,8 +30,8 @@ export default function CountriesChoise() {
   }, []);
   return (
     <motion.section
-      initial={{x:"-100%", opacity: 0}}
-      animate={{ x:"0", opacity: 1 }}
+      initial={{ x: "-100%", opacity: 0 }}
+      animate={{ x: "0", opacity: 1 }}
       exit={{
         x: "100%",
         transition: { duration: 0.3 },
@@ -64,7 +65,16 @@ export default function CountriesChoise() {
           </p>
           <button>Select</button>
         </div>
-        <h2 className="country-choise-tours-title">Top tour</h2>
+        <h2 className="country-choise__tours-title">Top tour</h2>
+        <ul className="country-choise__top-tours">
+          {country.bestTours && country.bestTours.map((tour) => (
+            <TourItem
+              image={tour.image}
+              title={tour.tourName}
+              reviews={tour.reviews}
+            />
+          ))}
+        </ul>
         <StatusRoader statusNumber={3} statusName="Choose a country" />
       </div>
     </motion.section>

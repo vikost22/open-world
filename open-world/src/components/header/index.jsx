@@ -43,7 +43,7 @@ export default function Header() {
             <div className="main-header__user-menu user-menu">
               <SearchForm />
               <div className="user-menu__account">
-                <a href="#" className="user-menu__account-link">
+                <a href="" className="user-menu__account-link">
                   <img
                     src="./images/icons/header/favorites-icon.svg"
                     className="user-menu__favorites-icon"
