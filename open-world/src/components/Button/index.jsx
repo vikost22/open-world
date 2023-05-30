@@ -7,6 +7,8 @@ export function Button(props) {
           border: props.border,
           color: props.color,
           padding: props.padding,
+          lineHeight: props.lineHigh,
+          fontSize: props.size
         }}
         onMouseEnter={(e) => {
           e.target.style.backgroundColor = "#FFFFCC";

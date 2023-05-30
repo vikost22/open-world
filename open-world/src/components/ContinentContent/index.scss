@@ -5,13 +5,15 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   width: 100%;
+  transition-duration: 1s;
 }
 .continent-content__wrapper {
-  @include mixins.flex(row, space-around, center, nowrap);
+  @include mixins.flex(row, space-between, center, nowrap);
 }
 .continent-text {
   @include mixins.flex(column, flex-start, flex-start, nowrap);
   max-width: 335px;
+  margin-left: 152px;
 }
 .continent-slider {
   font-weight: 600;
@@ -42,11 +44,4 @@
 .tours-review {
   @include mixins.flex(row, center, center, wrap);
   gap: 20px;
-}
-.tours__photo {
-  @include mixins.flex(column, center, flex-start, nowrap);
-  gap: 10px;
-}
-.tour--place {
-  @include mixins.textStyle(16px, 19px, 400, $textColorWhite);
 }

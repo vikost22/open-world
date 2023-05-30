@@ -3,6 +3,7 @@ import { Button } from "../Button";
 import TourItem from "../TourItem";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import StatusRoader from "../StatusRoader";
 
 export function ContinentContent(props) {
   const { data } = props;
@@ -44,7 +45,8 @@ export function ContinentContent(props) {
         className="continent-section"
         style={{
           backgroundImage: `url(${activeBack})`,
-        }}>
+        }}
+      >
         <div className="container">
           <div className="continent-content__wrapper">
             <div className="continent-text">
@@ -59,6 +61,8 @@ export function ContinentContent(props) {
                   backgroundColor="#F0E33F"
                   padding="4px 55px"
                   color="#1E1E1E"
+                  lineHigh="40px"
+                  size="24px"
                 />
               </Link>
               <a href="#" className="continent-slider" onClick={handleNext}>
@@ -71,12 +75,14 @@ export function ContinentContent(props) {
                   image={tour.image}
                   reviews={tour.reviews}
                   title={tour.tourName}
+                  tourId={tour.tourId}
                   size="xl"
                   key={tour.id}
                 />
               ))}
             </div>
           </div>
+          <StatusRoader statusNumber={2} statusName="Choose a continent" />
         </div>
       </motion.section>
     </>
