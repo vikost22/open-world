@@ -25,9 +25,16 @@ export function ContinentContent(props) {
       prevIndex === data.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  
+
   const activeItem = data[activeIndex];
   const prevItem = data[activeIndex - 1];
   const nextItem = data[activeIndex + 1];
+
+  const selectContinent = () => {
+    localStorage.setItem("selectedContinent", JSON.stringify(activeItem.name).toLowerCase());
+  };
 
   useEffect(() => {
     setActiveBack(activeItem ? activeItem.background : null);
@@ -35,12 +42,10 @@ export function ContinentContent(props) {
   return activeItem ? (
     <>
       <motion.section
-        initial={{ width: 0, rotate: -180 }}
-        animate={{ width: "100%", rotate: 0 }}
+        initial={{x: "-100%", opacity: 0}}
+        animate={{ x: "0", opacity: 1 }}
         exit={{
-          x: "100%",
           transition: { duration: 0.3 },
-          rotate: 180,
         }}
         className="continent-section"
         style={{
@@ -55,7 +60,7 @@ export function ContinentContent(props) {
               </a>
               <h2 className="continent-name">{activeItem.name}</h2>
               <h2 className="continent-description">{activeItem.text}</h2>
-              <Link to="/country">
+              <Link to="/country" onClick={selectContinent}>
                 <Button
                   text="Select"
                   backgroundColor="#F0E33F"
