@@ -4,6 +4,8 @@ import CountrySearch from "../countrySearch";
 import { motion } from "framer-motion";
 import StatusRoader from "../StatusRoader";
 import TourItem from "../TourItem";
+import { Link } from "react-router-dom";
+import { Button } from "../Button";
 
 export default function CountriesChoise() {
   const [country, setCountry] = useState({});
@@ -63,17 +65,28 @@ export default function CountriesChoise() {
           <p className="country-choise__description">
             {country.countryDescription}
           </p>
-          <button>Select</button>
+          <Link to={"/country"}>
+            <Button
+              text="Select"
+              backgroundColor="#F0E33F"
+              color="#000000"
+              border="none"
+              padding="4px 55px"
+            />
+          </Link>
         </div>
+
         <h2 className="country-choise__tours-title">Top tour</h2>
         <ul className="country-choise__top-tours">
-          {country.bestTours && country.bestTours.map((tour) => (
-            <TourItem
-              image={tour.image}
-              title={tour.tourName}
-              reviews={tour.reviews}
-            />
-          ))}
+          {country.bestTours &&
+            country.bestTours.map((tour) => (
+              <TourItem
+                image={tour.image}
+                title={tour.tourName}
+                reviews={tour.reviews}
+                tourId={tour.tourId}
+              />
+            ))}
         </ul>
         <StatusRoader statusNumber={3} statusName="Choose a country" />
       </div>

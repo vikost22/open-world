@@ -1,9 +1,11 @@
+import { addToFavorites, removeFromFavorites } from "../../redux/features/tours/toursSlice";
+import { useDispatch, useSelector } from "react-redux";
 export default function TourItem(props) {
-  const { image, reviews, title, size } = props;
-  // image путь в папке public (./images/...)
-  // reviews количество звезд
-  // title назва туру
-  // size по замовчуванню small для великої картинки передати "xl"
+  const { image, reviews, title, tourId, size } = props;
+  const dispatch = useDispatch();
+  const addedToFav = useSelector((state) => state.tours.likedTours);
+  const isAdded = addedToFav.find((tour) => tour.tourId === tourId);
+  
   const reviewStars = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= reviews) {
@@ -24,10 +26,20 @@ export default function TourItem(props) {
       />
     );
   }
+  function toggleToFavorites() {
+    if (!isAdded) {
+      dispatch(addToFavorites({ image, reviews, title, tourId }));
+    }else{
+      dispatch(removeFromFavorites( tourId ));
+    }
+  }
   return (
     <li className={`tour ${size === "xl" ? "tour-xl" : ""}`}>
-      <button className="tour__fav">
-        <img src="./images/icons/countries/fav.svg" alt="" />
+      <button className="tour__fav" onClick={toggleToFavorites}>
+        <img
+          src={`./images/icons/countries/${isAdded ? "fav-full" : "fav"}.svg`}
+          alt=""
+        />
       </button>
       <a href="" className="tour__link">
         <img
