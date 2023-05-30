@@ -1,19 +1,22 @@
 import { useLocation, Routes, Route } from "react-router-dom";
 import { ChooseCountry } from "../../pages";
-import { Title } from "../Title";
-import { LoginForm } from "../LoginForm";
+import Home from "../../pages/Home";
 import { AnimatePresence } from "framer-motion";
-import { ContinentChoose } from "../continentChoose";
+import Continent from "../../pages/Continent";
+import Sign from "../../pages/Sign";
+import Register from "../../pages/Register";
+
 export default function AnimatedRoutes() {
   const location = useLocation();
 
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Title />} />
-        <Route path="/continent" element={<ContinentChoose />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/continent" element={<Continent />} />
         <Route path="/country" element={<ChooseCountry />} />
-        <Route path="/login" element={<LoginForm />} />
+        <Route path="/login" element={<Sign />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </AnimatePresence>
   );

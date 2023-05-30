@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 168px;
+  transition-duration: 500ms;
+  padding-bottom: 68px;
   &__info {
     margin-left: 152px;
   }
@@ -12,10 +14,11 @@
 .country-choise__subtitle {
   @include mixins.textStyle(24px, 28px, 600, $textColorWhite);
   letter-spacing: 0.59em;
+  user-select: none;
 }
 
 .country-choise__choose {
-  @include mixins.flex(row, start, center, wrap);
+  @include mixins.flex(row, flex-start, center, wrap);
   margin-top: 12px;
   position: relative;
 }
@@ -23,9 +26,11 @@
 .country-choise__country-name {
   @include mixins.textStyle(88px, 96px, 600, $textColorWhite);
   margin-right: 20px;
+  user-select: none;
 }
 
 .country-choise__btn-country {
+  user-select: none;
   position: relative;
   width: 64px;
   height: 64px;
@@ -53,7 +58,7 @@
     transform: rotate(130deg);
     top: 16px;
     left: 18px;
-  transition-duration: 1s;
+    transition-duration: 1s;
   }
   &--active {
     &::before {
@@ -69,7 +74,7 @@
   }
 }
 
-.country-search-wraper{
+.country-search-wraper {
   position: absolute;
   top: 96px;
   left: 0;
@@ -85,9 +90,16 @@
   margin-bottom: 20px;
 }
 
-.country-choise-tours-title {
+.country-choise__tours-title {
   @include mixins.textStyle(32px, 34px, 600, $textColorWhite);
   letter-spacing: 0.12em;
   text-align: center;
   margin-top: 56px;
+  user-select: none;
+}
+
+.country-choise__top-tours {
+  @include mixins.flex(row, center, flex-start, wrap);
+  column-gap: 20px;
+  margin-top: 28px;
 }

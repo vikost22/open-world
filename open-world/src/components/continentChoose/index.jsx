@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ContinentContent } from "../ContinentContent";
+
 export function ContinentChoose() {
   const [data, setData] = useState(null);
 
@@ -10,10 +11,16 @@ export function ContinentChoose() {
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
-        console.error("Помилка під час отримання даних:", error);
+        console.error("Error fetching data:", error);
       }
     };
+
     fetchData();
   }, []);
-  return data ? <ContinentContent data={data} /> : null;
+
+  if (data) {
+    return <ContinentContent data={data} />;
+  }
+
+  return null;
 }

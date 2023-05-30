@@ -8,7 +8,7 @@ const SignupSchema = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
-export function LoginForm() {
+export function RegisterForm() {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -20,8 +20,8 @@ export function LoginForm() {
   return (
     <>
       <FormWrapper
-        title="Sign in"
-        description="Enter your email adress below and we wil email your login page. You can sign in from your Afress which looks like this">
+        title="Register"
+        description="Please, fill in the form and after that we can create account for you">
         <form action="login" className="form">
           <label className="form-label email--label" htmlFor="email">
             Your email
@@ -68,18 +68,15 @@ export function LoginForm() {
                 id="keepSign"
                 className="toggle-btn"
               />
-              Keep me signed in
+              Remember me
             </label>
-            <a href="#" className="forgot--link">
-              Forgot password?
-            </a>
           </div>
           <div className="btn__wrapper">
             <button
               onClick={formik.handleSubmit}
               type="submit"
               className="form-btn submit--btn">
-              Sign in
+              Register
             </button>
             <button className="form-btn google--sign">
               Continue with Google
@@ -87,9 +84,9 @@ export function LoginForm() {
           </div>
         </form>
         <p className="form-create">
-          Don`t have an account?{" "}
-          <Link to="/register" href="#" className="login-create create--link">
-            Create a new account
+          Already have a account?
+          <Link to="/login" href="#" className="login-create create--link">
+            Sign in
           </Link>
         </p>
       </FormWrapper>

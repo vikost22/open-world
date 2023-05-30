@@ -2,29 +2,76 @@
   {
     "name": "Asia",
     "background": "./images/continent/Asia/asiaBack.png",
-    "text": "Asia is a continent with a rich culture and diverse natural attractions, from hot deserts and tropical forests to snowy mountain .",
+    "text": "Asia is a continent with a rich culture and diverse natural attractions, from hot deserts and tropical forests to snowy mountains.",
     "tours": [
-      "./images/continent/Asia/secondTour.png",
-      "./images/continent/Asia/firstTour.png",
-      "./images/continent/Asia/thirdTour.png"
-    ],
-    "toursPlace": ["Tian Shan,China", "Tottori,Japan", "Duck Lak,Vietnam"],
-    "toursStars": [4, 5, 5]
+      {
+        "tourName": "Tian Shan, China",
+        "reviews": 4,
+        "image": "./images/continent/Asia/secondTour.png",
+        "tourid": 11
+      },
+      {
+        "tourName": "Tottori, Japan",
+        "reviews": 5,
+        "image": "./images/continent/Asia/firstTour.png",
+        "tourid": 12
+      },
+      {
+        "tourName": "Duck Lake, Vietnam",
+        "reviews": 5,
+        "image": "./images/continent/Asia/thirdTour.png",
+        "tourid": 13
+      }
+    ]
   },
   {
     "name": "Australia",
     "background": "./images/continent/Australia/australiaBack.png",
     "text": "Australia is a vast and diverse country known for its stunning natural beauty, vibrant cities, unique wildlife, and a relaxed way of life.",
     "tours": [
-      "./images/continent/Australia/australiaFirst.png",
-      "./images/continent/Australia/australiaSecond.png",
-      "./images/continent/Australia/australiaThird.png"
-    ],
-    "toursPlace": [
-      "Sydney,Australia",
-      "Lincoln Rock,Australia",
-      "Springbrook,Australia"
-    ],
-    "toursStars": [5, 5, 5]
+      {
+        "tourName": "Sydney, Australia",
+        "reviews": 5,
+        "image": "./images/continent/Australia/australiaFirst.png",
+        "tourid": 14
+      },
+      {
+        "tourName": "Lincoln Rock, Australia",
+        "reviews": 5,
+        "image": "./images/continent/Australia/australiaSecond.png",
+        "tourid": 15
+      },
+      {
+        "tourName": "Springbrook, Australia",
+        "reviews": 5,
+        "image": "./images/continent/Australia/australiaThird.png",
+        "tourid": 16
+      }
+    ]
+  },
+  {
+    "name": "America",
+    "background": "./images/continent/America/americaBack.png",
+    "text": "Explore the diversity of America, from breathtaking landscapes to vibrant cities, making it the perfect destination for all types of travelers.",
+    "tours": [
+      {
+        "tourName": "Alkatraz, America",
+        "reviews": 5,
+        "image": "./images/continent/America/americaThird.png",
+        "tourid": 17
+      },
+      {
+        "tourName": "Alaska, America",
+        "reviews": 5,
+        "image": "./images/continent/America/americaSecond.png",
+        "tourid": 18
+      },
+      {
+        "tourName": "Yosemite, America",
+        "reviews": 5,
+        "image": "./images/continent/America/americaFirst.png",
+        "tourid": 19
+      }
+    ]
   }
 ]

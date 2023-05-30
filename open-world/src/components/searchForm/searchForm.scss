@@ -1,5 +1,5 @@
 .search-form {
-    @include mixins.flex(row, start, center, nowrap);
+    @include mixins.flex(row, flex-start, center, nowrap);
     position: relative;
   }
   

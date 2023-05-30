@@ -5,7 +5,7 @@ export default function Header() {
   const user = localStorage.getItem("user");
   const location = useLocation();
   return (
-    <header className="main-header">
+    <header className="main-header ">
       <div className="container main-header__container">
         <div className="main-header__logo">
           <Link to={"/"}>
@@ -20,7 +20,8 @@ export default function Header() {
           </Link>
         </div>
         {!user ? (
-          location.pathname !== "/login" && (
+          location.pathname !== "/login" &&
+          location.pathname !== "/register" && (
             <Link to="/login">
               <Button
                 text="Log in"
@@ -46,7 +47,7 @@ export default function Header() {
             <div className="main-header__user-menu user-menu">
               <SearchForm />
               <div className="user-menu__account">
-                <a href="#" className="user-menu__account-link">
+                <a href="" className="user-menu__account-link">
                   <img
                     src="./images/icons/header/favorites-icon.svg"
                     className="user-menu__favorites-icon"
