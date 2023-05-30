@@ -13,6 +13,7 @@ export default function TourItem(props) {
         <img
           src={"./images/icons/countries/review-star-active.svg"}
           className="tour__star"
+          alt={title}
         />
       );
       continue;
@@ -23,6 +24,7 @@ export default function TourItem(props) {
         className="tour__star"
         width={12}
         height={12}
+        alt={title}
       />
     );
   }
@@ -41,10 +43,10 @@ export default function TourItem(props) {
           alt=""
         />
       </button>
-      <a href="" className="tour__link">
+      <a href="#" className="tour__link">
         <img
           src={image}
-          alt=""
+          alt={title}
           className="tour__image"
           width={166}
           height={215}

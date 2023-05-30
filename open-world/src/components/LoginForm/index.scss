@@ -1,4 +1,4 @@
-.login-section {
+.form-section {
   background: url("../../../public/images/login_page/loginBack.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   padding-top: 40px;
   overflow-x: hidden;
 }
-.login-form__wrapper {
+.form__wrapper {
   box-sizing: border-box;
   padding: 50px 60px;
   max-width: 650px;
@@ -21,7 +21,7 @@
   margin-top: 15px;
   @include mixins.textStyle(20px, 20px, 500, #ff0000);
 }
-.login__title {
+.form-title {
   @include mixins.textStyle(24px, 20px, 500, inherit);
   &::after {
     content: "";
@@ -33,13 +33,13 @@
     margin-bottom: 10px;
   }
 }
-.login__description {
+.form-description {
   @include mixins.textStyle(13px, 20px, 500, #bfbfbf);
 }
-.login-form {
+.form {
   @include mixins.flex(column, flex-start, flex-start, nowrap);
 }
-.login-input {
+.form-input {
   display: inline-block;
   width: 100%;
   border: none;
@@ -94,7 +94,7 @@
   width: 100%;
   @include mixins.flex(row, space-between, center, nowrap);
 }
-.keep--sign {
+.toggle-btn {
   position: absolute;
   top: -9999px;
 }
@@ -172,4 +172,16 @@
   background-repeat: no-repeat;
   width: 22px;
   height: 22px;
+}
+.form-create {
+  margin-top: 50px;
+  text-align: center;
+  @include mixins.textStyle(15px, 20px, 500, #fefefe);
+}
+.create--link {
+  margin-left: 10px;
+  color: #4686e4;
+  &:hover {
+    color: darken(#4686e4, 20%);
+  }
 }

@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import { Button } from "../Button";
 import StatusRoader from "../StatusRoader";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 export function Title() {
   return (
     <motion.section
@@ -12,8 +12,7 @@ export function Title() {
         x: "100%",
         transition: { duration: 0.3 },
         rotate: 180,
-      }}
-    >
+      }}>
       <div className="container">
         <div className="title-wrapper">
           <h1 className="title-slogan">
@@ -21,7 +20,7 @@ export function Title() {
             <span className="title-slogan field--text">AND</span>
             TRAVEL
           </h1>
-          <Link to={"/country"}>
+          <Link to={"/continent"}>
             <Button
               text="Started"
               backgroundColor="#F0E33F"
