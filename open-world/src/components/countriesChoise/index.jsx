@@ -18,6 +18,7 @@ export default function CountriesChoise() {
     });
   }
   function findCountry(id) {
+    localStorage.setItem('selectedCountry', `${id}`);
     axios.get("./database/countries.json").then((response) => {
       const newCountry = response.data.find((item) => item.countryId === id);
       setCountry(newCountry);
@@ -28,7 +29,7 @@ export default function CountriesChoise() {
   }
   useEffect(() => {
     getCountries();
-    findCountry(1);
+    findCountry(JSON.parse(localStorage.getItem('selectedCountry'))||1);
   }, []);
   return (
     <motion.section
@@ -72,6 +73,8 @@ export default function CountriesChoise() {
               color="#000000"
               border="none"
               padding="4px 55px"
+              size="24px"
+              lineHigh="40px"
             />
           </Link>
         </div>

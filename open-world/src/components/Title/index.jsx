@@ -12,7 +12,8 @@ export function Title() {
         x: "100%",
         transition: { duration: 0.3 },
         rotate: 180,
-      }}>
+      }}
+    >
       <div className="container">
         <div className="title-wrapper">
           <h1 className="title-slogan">
@@ -27,6 +28,8 @@ export function Title() {
               color="#000000"
               border="none"
               padding="4px 55px"
+              lineHigh="40px"
+              size="24px"
             />
           </Link>
           <StatusRoader statusNumber={1} statusName="Started" />
