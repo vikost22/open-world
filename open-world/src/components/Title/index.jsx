@@ -6,12 +6,10 @@ export function Title() {
   return (
     <motion.section
       className="title-section"
-      initial={{ width: 0, rotate: -180 }}
-      animate={{ width: "100%", rotate: 0 }}
+      initial={{ x: "-100%", opacity: 0 }}
+      animate={{ x: "0", opacity: 1 }}
       exit={{
-        x: "100%",
         transition: { duration: 0.3 },
-        rotate: 180,
       }}
     >
       <div className="container">

@@ -11,34 +11,44 @@ export default function CountriesChoise() {
   const [country, setCountry] = useState({});
   const [allCuntries, setAllCuntries] = useState([]);
   const [searchModalState, setSearchModalState] = useState(false);
-
+  const countryUrl = `./database/${JSON.parse(
+    localStorage.getItem("selectedContinent")
+  )}/countries.json`;
   function getCountries() {
-    axios.get("./database/countries.json").then((response) => {
-      setAllCuntries(response.data);
-    });
+    axios
+      .get(countryUrl)
+      .then((response) => {
+        setAllCuntries(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
   function findCountry(id) {
-    localStorage.setItem('selectedCountry', `${id}`);
-    axios.get("./database/countries.json").then((response) => {
-      const newCountry = response.data.find((item) => item.countryId === id);
-      setCountry(newCountry);
-    });
+    localStorage.setItem("selectedCountry", `${id}`);
+    axios
+      .get(countryUrl)
+      .then((response) => {
+        const newCountry = response.data.find((item) => item.countryId === id);
+        setCountry(newCountry);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
   function openSearch() {
     setSearchModalState(!searchModalState);
   }
   useEffect(() => {
     getCountries();
-    findCountry(JSON.parse(localStorage.getItem('selectedCountry'))||1);
+    findCountry(JSON.parse(localStorage.getItem("selectedCountry")) || 1);
   }, []);
   return (
     <motion.section
       initial={{ x: "-100%", opacity: 0 }}
       animate={{ x: "0", opacity: 1 }}
       exit={{
-        x: "100%",
         transition: { duration: 0.3 },
-        rotate: 180,
       }}
       className="country-choise"
       style={{ backgroundImage: `url( ${country.backgroundImage} )` }}
