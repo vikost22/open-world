@@ -14,9 +14,10 @@ export default function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/continent" element={<Continent />} />
-        <Route path="/country" element={<ChooseCountry />} />
+        <Route path="/countries" element={<ChooseCountry />} />
         <Route path="/login" element={<Sign />} />
         <Route path="/register" element={<Register />} />
+        {/* <Route path="/country" element={<Country />} /> */}
       </Routes>
     </AnimatePresence>
   );

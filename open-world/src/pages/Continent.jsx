@@ -1,5 +1,5 @@
-import { ContinentChoose } from "../components/continentChoose";
+import { ContinentContent } from "../components/ContinentContent";
 
 export default function Continent() {
-  return <ContinentChoose />;
+  return <ContinentContent />;
 }
