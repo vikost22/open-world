@@ -80,7 +80,11 @@
   left: 0;
   overflow: hidden;
   width: 320px;
-  height: 320px;
+  height: 0;
+  transition-duration: 1s;
+  &--active{
+    height: 320px;
+  }
 }
 
 .country-choise__description {

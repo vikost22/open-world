@@ -7,18 +7,16 @@ export default function Header() {
   return (
     <header className="main-header ">
       <div className="container main-header__container">
-        <div className="main-header__logo">
-          <Link to={"/"}>
-            <img
-              src="./images/icons/header/header-logo.svg"
-              width="29"
-              height="32"
-              alt="logo"
-              className="main-header__logo-icon"
-            />
-            <span className="main-header__logo-name">OpenWorld</span>
-          </Link>
-        </div>
+        <Link to={"/"} className="main-header__logo">
+          <img
+            src="./images/icons/header/header-logo.svg"
+            width="29"
+            height="32"
+            alt="logo"
+            className="main-header__logo-icon"
+          />
+          <span className="main-header__logo-name">OpenWorld</span>
+        </Link>
         {!user ? (
           location.pathname !== "/login" &&
           location.pathname !== "/register" && (
@@ -37,7 +35,8 @@ export default function Header() {
             <div className="main-header__nav">
               <a
                 href="#"
-                className="main-header__nav-link main-header__nav-link--accent">
+                className="main-header__nav-link main-header__nav-link--accent"
+              >
                 Home
               </a>
               <a href="#" className="main-header__nav-link">

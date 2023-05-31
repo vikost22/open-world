@@ -21,7 +21,6 @@ export const toursSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { addToFavorites, removeFromFavorites} = toursSlice.actions;
 
 export default toursSlice.reducer;

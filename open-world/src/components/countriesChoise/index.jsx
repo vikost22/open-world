@@ -1,48 +1,38 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import CountrySearch from "../countrySearch";
 import { motion } from "framer-motion";
 import StatusRoader from "../StatusRoader";
 import TourItem from "../TourItem";
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
+import { useGetCountriesByContinentQuery } from "../../redux/services/countriesApi";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCountry } from "../../redux/features/countries/countriesSlice";
 
 export default function CountriesChoise() {
-  const [country, setCountry] = useState({});
-  const [allCuntries, setAllCuntries] = useState([]);
+  const dispatch = useDispatch();
+  const continentName = useSelector(
+    (state) => state.countries.selectedContinent
+  );
+  const countryId = useSelector((state) => state.countries.selectedCountry);
+  const { data } = useGetCountriesByContinentQuery(continentName);
   const [searchModalState, setSearchModalState] = useState(false);
-  const countryUrl = `./database/${JSON.parse(
-    localStorage.getItem("selectedContinent")
-  )}/countries.json`;
-  function getCountries() {
-    axios
-      .get(countryUrl)
-      .then((response) => {
-        setAllCuntries(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
-  function findCountry(id) {
-    localStorage.setItem("selectedCountry", `${id}`);
-    axios
-      .get(countryUrl)
-      .then((response) => {
-        const newCountry = response.data.find((item) => item.countryId === id);
-        setCountry(newCountry);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  const [country, setCountry] = useState({
+    name: "Page not found",
+    countryDescription: "This page will be added soon",
+  });
+
+  function selectNewCountry(id) {
+    dispatch(selectCountry(id));
   }
   function openSearch() {
     setSearchModalState(!searchModalState);
   }
   useEffect(() => {
-    getCountries();
-    findCountry(JSON.parse(localStorage.getItem("selectedCountry")) || 1);
-  }, []);
+    if (data) {
+      setCountry(data.find((country) => country.countryId === countryId));
+    }
+  }, [countryId, data]);
   return (
     <motion.section
       initial={{ x: "-100%", opacity: 0 }}
@@ -64,11 +54,15 @@ export default function CountriesChoise() {
               }`}
               onClick={openSearch}
             />
-            <div className="country-search-wraper">
+            <div
+              className={`country-search-wraper ${
+                searchModalState && "country-search-wraper--active"
+              }`}
+            >
               <CountrySearch
                 isOpen={searchModalState}
-                countries={allCuntries}
-                setCountry={findCountry}
+                countries={data || []}
+                setCountry={selectNewCountry}
                 openSearch={setSearchModalState}
               />
             </div>
@@ -76,7 +70,7 @@ export default function CountriesChoise() {
           <p className="country-choise__description">
             {country.countryDescription}
           </p>
-          <Link to={"/country"}>
+          <Link to={`/country`}>
             <Button
               text="Select"
               backgroundColor="#F0E33F"

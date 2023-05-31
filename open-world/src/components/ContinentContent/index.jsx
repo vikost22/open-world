@@ -4,9 +4,13 @@ import TourItem from "../TourItem";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import StatusRoader from "../StatusRoader";
+import { useDispatch } from "react-redux";
+import { selectContinent } from "../../redux/features/countries/countriesSlice";
+import { useGetAllCountriesQuery } from "../../redux/services/countriesApi";
 
 export function ContinentContent(props) {
-  const { data } = props;
+  const dispatch = useDispatch();
+  const { data } = useGetAllCountriesQuery("");
   const [activeIndex, setActiveIndex] = useState(0); // Початково активний елемент - перший
   const [activeBack, setActiveBack] = useState(
     "../../../public/images/continent/Asia/asiaBack.png"
@@ -26,14 +30,12 @@ export function ContinentContent(props) {
     );
   };
 
-  
+  const activeItem = data && data[activeIndex];
+  const prevItem = data && data[activeIndex - 1];
+  const nextItem = data && data[activeIndex + 1];
 
-  const activeItem = data[activeIndex];
-  const prevItem = data[activeIndex - 1];
-  const nextItem = data[activeIndex + 1];
-
-  const selectContinent = () => {
-    localStorage.setItem("selectedContinent", JSON.stringify(activeItem.name).toLowerCase());
+  const selectNewContinent = () => {
+    dispatch(selectContinent(activeItem.name.toLowerCase()));
   };
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export function ContinentContent(props) {
   return activeItem ? (
     <>
       <motion.section
-        initial={{x: "-100%", opacity: 0}}
+        initial={{ x: "-100%", opacity: 0 }}
         animate={{ x: "0", opacity: 1 }}
         exit={{
           transition: { duration: 0.3 },
@@ -60,7 +62,7 @@ export function ContinentContent(props) {
               </a>
               <h2 className="continent-name">{activeItem.name}</h2>
               <h2 className="continent-description">{activeItem.text}</h2>
-              <Link to="/country" onClick={selectContinent}>
+              <Link to="/countries" onClick={selectNewContinent}>
                 <Button
                   text="Select"
                   backgroundColor="#F0E33F"
