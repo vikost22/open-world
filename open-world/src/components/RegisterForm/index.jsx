@@ -29,7 +29,7 @@ const SignupSchema = Yup.object().shape({
 
 export function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false);
-  const toggleShow = () => {
+  const toggleShowPass = () => {
     setShowPassword(!showPassword);
   };
   const formik = useFormik({
@@ -119,7 +119,7 @@ export function RegisterForm() {
             Password
             <input
               className="form-input"
-              type={showPassword ? "password" : "text"}
+              type={showPassword ? "text" : "password"}
               name="password"
               id="password"
               onChange={formik.handleChange}
@@ -134,16 +134,16 @@ export function RegisterForm() {
             {showPassword ? (
               <img
                 className="form-icon toggle--pass"
-                src="./images/login_page/closePassword.png"
-                alt="close"
-                onClick={toggleShow}
+                src="./images/login_page/openPassword.png"
+                alt="open"
+                onClick={toggleShowPass}
               />
             ) : (
               <img
                 className="form-icon toggle--pass"
-                src="./images/login_page/openPassword.png"
-                alt="open"
-                onClick={toggleShow}
+                src="./images/login_page/closePassword.png"
+                alt="close"
+                onClick={toggleShowPass}
               />
             )}
           </label>
