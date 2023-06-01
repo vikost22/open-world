@@ -14,25 +14,25 @@ export default function CountriesChoise() {
   const continentName = useSelector(
     (state) => state.countries.selectedContinent
   );
-  const countryId = useSelector((state) => state.countries.selectedCountry);
   const { data } = useGetCountriesByContinentQuery(continentName);
+  const selectedCountry = useSelector((state) => state.countries.selectedCountry);
   const [searchModalState, setSearchModalState] = useState(false);
   const [country, setCountry] = useState({
     name: "Page not found",
     countryDescription: "This page will be added soon",
   });
 
-  function selectNewCountry(id) {
-    dispatch(selectCountry(id));
+  function selectNewCountry(country) {
+    dispatch(selectCountry(country));
   }
   function openSearch() {
     setSearchModalState(!searchModalState);
   }
   useEffect(() => {
     if (data) {
-      setCountry(data.find((country) => country.countryId === countryId));
+      setCountry(data.find((country) => country.countryId === selectedCountry.countryId));
     }
-  }, [countryId, data]);
+  }, [selectedCountry, data]);
   return (
     <motion.section
       initial={{ x: "-100%", opacity: 0 }}

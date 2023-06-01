@@ -1,5 +1,5 @@
 import { ContinentContent } from "../components/ContinentContent";
 
-export default function Continent() {
+export function Continent() {
   return <ContinentContent />;
 }

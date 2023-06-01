@@ -1,5 +1,5 @@
 import { LoginForm } from "../components/LoginForm";
 
-export default function Sign() {
+export function Sign() {
   return <LoginForm />;
 }

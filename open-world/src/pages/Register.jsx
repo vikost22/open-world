@@ -1,4 +1,4 @@
 import { RegisterForm } from "../components/RegisterForm";
-export default function Register() {
+export function Register() {
   return <RegisterForm />;
 }

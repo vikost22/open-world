@@ -1,79 +1,79 @@
 [
-    {
-        "countryId": 1,
-        "name": "Vietnam",
-        "countryDescription": "Vietnam is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
-        "backgroundImage": "./images/countries/vietnam/background.png",
-        "bestTours": [
-            {
-                "tourName": "Chin Gip,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/vietnam/chin-gip.png",
-                "tourId": 1
-            },
-            {
-                "tourName": "Duck Lak,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/vietnam/duck-lak.png",
-                "tourId": 2
-            },
-            {
-                "tourName": "Chanhoi,Vietnam",
-                "reviews": 4, 
-                "image": "./images/countries/vietnam/chanhoi.png",
-                "tourId": 3
-            },
-            {
-                "tourName": "Hoshimi,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/vietnam/hoshimi.png",
-                "tourId": 4
-            },
-            {
-                "tourName": "Da Nang,Vietnam",
-                "reviews": 4, 
-                "image": "./images/countries/vietnam/da-nang.png",
-                "tourId": 5
-            }
-        ]
-    },
-    {
-        "countryId": 2,
-        "name": "Japan",
-        "countryDescription": "Japan is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
-        "backgroundImage": "./images/countries/japan/background.png",
-        "bestTours": [
-            {
-                "tourName": "Chinso,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/japan/chinso.png",
-                "tourId": 6
-            },
-            {
-                "tourName": "Fuji,Japan",
-                "reviews": 5, 
-                "image": "./images/countries/japan/fuji.png",
-                "tourId": 7
-            },
-            {
-                "tourName": "Chanhoi,Japan",
-                "reviews": 4, 
-                "image": "./images/countries/japan/chanhoi.png",
-                "tourId": 8
-            },
-            {
-                "tourName": "Hoshimi,Japan",
-                "reviews": 5, 
-                "image": "./images/countries/japan/hoshimi.png",
-                "tourId": 9
-            },
-            {
-                "tourName": "Tochigi,Japan",
-                "reviews": 4, 
-                "image": "./images/countries/japan/tochigi.png",
-                "tourId": 10
-            }
-        ]
-    }
+  {
+    "countryId": 1,
+    "name": "Vietnam",
+    "countryDescription": "Vietnam is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
+    "backgroundImage": "./images/countries/vietnam/background.png",
+    "backgroundImagePage": "../../images/countries/vietnam/background-page.png",
+    "bestTours": [
+      {
+        "tourName": "Chin Gip,Vietnam",
+        "reviews": 5,
+        "image": "./images/countries/vietnam/chin-gip.png",
+        "tourId": 1
+      },
+      {
+        "tourName": "Duck Lak,Vietnam",
+        "reviews": 5,
+        "image": "./images/countries/vietnam/duck-lak.png",
+        "tourId": 2
+      },
+      {
+        "tourName": "Chanhoi,Vietnam",
+        "reviews": 4,
+        "image": "./images/countries/vietnam/chanhoi.png",
+        "tourId": 3
+      },
+      {
+        "tourName": "Hoshimi,Vietnam",
+        "reviews": 5,
+        "image": "./images/countries/vietnam/hoshimi.png",
+        "tourId": 4
+      },
+      {
+        "tourName": "Da Nang,Vietnam",
+        "reviews": 4,
+        "image": "./images/countries/vietnam/da-nang.png",
+        "tourId": 5
+      }
+    ]
+  },
+  {
+    "countryId": 2,
+    "name": "Japan",
+    "countryDescription": "Japan is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
+    "backgroundImage": "./images/countries/japan/background.png",
+    "bestTours": [
+      {
+        "tourName": "Chinso,Vietnam",
+        "reviews": 5,
+        "image": "./images/countries/japan/chinso.png",
+        "tourId": 6
+      },
+      {
+        "tourName": "Fuji,Japan",
+        "reviews": 5,
+        "image": "./images/countries/japan/fuji.png",
+        "tourId": 7
+      },
+      {
+        "tourName": "Chanhoi,Japan",
+        "reviews": 4,
+        "image": "./images/countries/japan/chanhoi.png",
+        "tourId": 8
+      },
+      {
+        "tourName": "Hoshimi,Japan",
+        "reviews": 5,
+        "image": "./images/countries/japan/hoshimi.png",
+        "tourId": 9
+      },
+      {
+        "tourName": "Tochigi,Japan",
+        "reviews": 4,
+        "image": "./images/countries/japan/tochigi.png",
+        "tourId": 10
+      }
+    ]
+  }
 ]
-  
