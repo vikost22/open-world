@@ -23,33 +23,33 @@ export function LoginForm() {
         title="Sign in"
         description="Enter your email adress below and we wil email your login page. You can sign in from your Afress which looks like this">
         <form action="login" className="form">
-          <label className="form-label email--label" htmlFor="email">
+          <label className="form-label">
             Your email
+            <input
+              className="form-input"
+              type="text"
+              name="email"
+              id="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
           </label>
-          <input
-            className="form-input"
-            type="text"
-            name="email"
-            id="email"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-          />
           {formik.touched.email && formik.errors.email ? (
             <div className="form-validation">{formik.errors.email}</div>
           ) : null}
-          <label className="form-label pass--label" htmlFor="password">
+          <label className="form-label">
             Password
+            <input
+              className="form-input"
+              type="password"
+              name="password"
+              id="password"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
+            />
           </label>
-          <input
-            className="form-input"
-            type="password"
-            name="password"
-            id="password"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.password}
-          />
           {formik.touched.password && formik.errors.password ? (
             <div className="form-validation">{formik.errors.password}</div>
           ) : null}
