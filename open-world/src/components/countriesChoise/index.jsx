@@ -15,7 +15,9 @@ export default function CountriesChoise() {
     (state) => state.countries.selectedContinent
   );
   const { data } = useGetCountriesByContinentQuery(continentName);
-  const selectedCountry = useSelector((state) => state.countries.selectedCountry);
+  const selectedCountry = useSelector(
+    (state) => state.countries.selectedCountry
+  );
   const [searchModalState, setSearchModalState] = useState(false);
   const [country, setCountry] = useState({
     name: "Page not found",
@@ -30,7 +32,9 @@ export default function CountriesChoise() {
   }
   useEffect(() => {
     if (data) {
-      setCountry(data.find((country) => country.countryId === selectedCountry.countryId));
+      setCountry(
+        data.find((country) => country.countryId === selectedCountry.countryId)
+      );
     }
   }, [selectedCountry, data]);
   return (
@@ -86,14 +90,7 @@ export default function CountriesChoise() {
         <h2 className="country-choise__tours-title">Top tour</h2>
         <ul className="country-choise__top-tours">
           {country.bestTours &&
-            country.bestTours.map((tour) => (
-              <TourItem
-                image={tour.image}
-                title={tour.tourName}
-                reviews={tour.reviews}
-                tourId={tour.tourId}
-              />
-            ))}
+            country.bestTours.map((tour) => <TourItem {...tour} />)}
         </ul>
         <StatusRoader statusNumber={3} statusName="Choose a country" />
       </div>

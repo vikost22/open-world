@@ -7,19 +7,19 @@
       {
         "tourName": "Tian Shan, China",
         "reviews": 4,
-        "image": "./images/continent/Asia/secondTour.png",
+        "imageShort": "./images/continent/Asia/secondTour.png",
         "tourId": 11
       },
       {
         "tourName": "Tottori, Japan",
         "reviews": 5,
-        "image": "./images/continent/Asia/firstTour.png",
+        "imageShort": "./images/continent/Asia/firstTour.png",
         "tourId": 12
       },
       {
         "tourName": "Duck Lake, Vietnam",
         "reviews": 5,
-        "image": "./images/continent/Asia/thirdTour.png",
+        "imageShort": "./images/continent/Asia/thirdTour.png",
         "tourId": 13
       }
     ]
@@ -32,19 +32,19 @@
       {
         "tourName": "Sydney, Australia",
         "reviews": 5,
-        "image": "./images/continent/Australia/australiaFirst.png",
+        "imageShort": "./images/continent/Australia/australiaFirst.png",
         "tourId": 14
       },
       {
         "tourName": "Lincoln Rock, Australia",
         "reviews": 5,
-        "image": "./images/continent/Australia/australiaSecond.png",
+        "imageShort": "./images/continent/Australia/australiaSecond.png",
         "tourId": 15
       },
       {
         "tourName": "Springbrook, Australia",
         "reviews": 5,
-        "image": "./images/continent/Australia/australiaThird.png",
+        "imageShort": "./images/continent/Australia/australiaThird.png",
         "tourId": 16
       }
     ]
@@ -57,19 +57,19 @@
       {
         "tourName": "Alkatraz, America",
         "reviews": 5,
-        "image": "./images/continent/America/americaThird.png",
+        "imageShort": "./images/continent/America/americaThird.png",
         "tourId": 17
       },
       {
         "tourName": "Alaska, America",
         "reviews": 5,
-        "image": "./images/continent/America/americaSecond.png",
+        "imageShort": "./images/continent/America/americaSecond.png",
         "tourId": 18
       },
       {
         "tourName": "Yosemite, America",
         "reviews": 5,
-        "image": "./images/continent/America/americaFirst.png",
+        "imageShort": "./images/continent/America/americaFirst.png",
         "tourId": 19
       }
     ]
