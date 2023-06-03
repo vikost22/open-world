@@ -79,12 +79,8 @@ export function ContinentContent(props) {
             <div className="tours-review">
               {activeItem.tours.map((tour, index) => (
                 <TourItem
-                  image={tour.image}
-                  reviews={tour.reviews}
-                  title={tour.tourName}
-                  tourId={tour.tourId}
+                  {...tour}
                   size="xl"
-                  key={tour.id}
                 />
               ))}
             </div>

@@ -1,79 +1,140 @@
 [
-    {
-        "countryId": 1,
-        "name": "Vietnam",
-        "countryDescription": "Vietnam is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
-        "backgroundImage": "./images/countries/vietnam/background.png",
-        "bestTours": [
-            {
-                "tourName": "Chin Gip,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/vietnam/chin-gip.png",
-                "tourId": 1
-            },
-            {
-                "tourName": "Duck Lak,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/vietnam/duck-lak.png",
-                "tourId": 2
-            },
-            {
-                "tourName": "Chanhoi,Vietnam",
-                "reviews": 4, 
-                "image": "./images/countries/vietnam/chanhoi.png",
-                "tourId": 3
-            },
-            {
-                "tourName": "Hoshimi,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/vietnam/hoshimi.png",
-                "tourId": 4
-            },
-            {
-                "tourName": "Da Nang,Vietnam",
-                "reviews": 4, 
-                "image": "./images/countries/vietnam/da-nang.png",
-                "tourId": 5
-            }
-        ]
-    },
-    {
-        "countryId": 2,
-        "name": "Japan",
-        "countryDescription": "Japan is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
-        "backgroundImage": "./images/countries/japan/background.png",
-        "bestTours": [
-            {
-                "tourName": "Chinso,Vietnam",
-                "reviews": 5, 
-                "image": "./images/countries/japan/chinso.png",
-                "tourId": 6
-            },
-            {
-                "tourName": "Fuji,Japan",
-                "reviews": 5, 
-                "image": "./images/countries/japan/fuji.png",
-                "tourId": 7
-            },
-            {
-                "tourName": "Chanhoi,Japan",
-                "reviews": 4, 
-                "image": "./images/countries/japan/chanhoi.png",
-                "tourId": 8
-            },
-            {
-                "tourName": "Hoshimi,Japan",
-                "reviews": 5, 
-                "image": "./images/countries/japan/hoshimi.png",
-                "tourId": 9
-            },
-            {
-                "tourName": "Tochigi,Japan",
-                "reviews": 4, 
-                "image": "./images/countries/japan/tochigi.png",
-                "tourId": 10
-            }
-        ]
-    }
+  {
+    "countryId": 1,
+    "name": "Vietnam",
+    "countryDescription": "Vietnam is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
+    "backgroundImage": "./images/countries/vietnam/background.png",
+    "backgroundImagePage": "./images/countries/vietnam/background-page.png",
+    "backgroundImageVideo": "./images/countries/vietnam/video-about.png",
+    "videoLink": "./videos/vietnam.mp4",
+    "bestTours": [
+      {
+        "tourName": "HISTORY TOUR OF VIETNAM 3 DAYS",
+        "description": "Embark on a captivating historical tour through Vietnam and delve into its rich past. From exploring ancient imperial citadels and pagodas to tracing the footsteps of the Vietnam War, this immersive journey will provide a profound understanding of the country's vibrant history and cultural heritage.",
+        "reviews": 5,
+        "imageShort": "./images/countries/vietnam/chin-gip.png",
+        "imageTour": "./images/countries/vietnam/tours/classic.png",
+        "tourId": 1,
+        "price": 650
+      },
+      {
+        "tourName": "SURFING TOUR 4 DAYS",
+        "description": "Embark on an unforgettable surf tour adventure as you explore breathtaking coastlines, ride epic waves, and immerse yourself in the exhilarating world of surfing. Whether you're a beginner looking to catch your first wave or an experienced surfer seeking new challenges.",
+        "reviews": 5,
+        "imageShort": "./images/countries/vietnam/surfing.png",
+        "imageTour": "./images/countries/vietnam/tours/surfing.png",
+        "tourId": 2,
+        "price": 760
+      },
+      {
+        "tourName": "VIETNAM CLASSIC TOUR 4 DAYS",
+        "description": "The Vietnam Classic Tour 5 Days offers an exciting and unforgettable journey through Vietnam. Over the course of five days, the tour allows guests to explore the beauty and culture of this amazing country.",
+        "reviews": 4,
+        "imageShort": "./images/countries/vietnam/chanhoi.png",
+        "imageTour": "./images/countries/vietnam/tours/classic.png",
+        "tourId": 3,
+        "price": 600
+      },
+      {
+        "tourName": "TOUR OF VIETNAMS INTERNATIONALS PARKS",
+        "description": "Experience the awe-inspiring beauty of Vietnam's national parks on this immersive tour. From lush jungles teeming with diverse wildlife to majestic waterfalls and breathtaking mountain landscapes, you'll be surrounded by nature's wonders at every turn, creating memories that will last a lifetime.",
+        "reviews": 5,
+        "imageShort": "./images/countries/vietnam/hoshimi.png",
+        "imageTour": "./images/countries/vietnam/tours/parks.png",
+        "tourId": 4,
+        "price": 700
+      }
+    ],
+    "tours": [
+      {
+        "tourName": "HISTORY TOUR OF VIETNAM 3 DAYS",
+        "description": "Embark on a captivating historical tour through Vietnam and delve into its rich past. From exploring ancient imperial citadels and pagodas to tracing the footsteps of the Vietnam War, this immersive journey will provide a profound understanding of the country's vibrant history and cultural heritage.",
+        "reviews": 5,
+        "imageShort": "./images/countries/vietnam/chin-gip.png",
+        "imageTour": "./images/countries/vietnam/tours/classic.png",
+        "tourId": 1,
+        "price": 650
+      },
+      {
+        "tourName": "SURFING TOUR 4 DAYS",
+        "description": "Embark on an unforgettable surf tour adventure as you explore breathtaking coastlines, ride epic waves, and immerse yourself in the exhilarating world of surfing. Whether you're a beginner looking to catch your first wave or an experienced surfer seeking new challenges.",
+        "reviews": 5,
+        "imageShort": "./images/countries/vietnam/surfing.png",
+        "imageTour": "./images/countries/vietnam/tours/surfing.png",
+        "tourId": 2,
+        "price": 760
+      },
+      {
+        "tourName": "VIETNAM CLASSIC TOUR 4 DAYS",
+        "description": "The Vietnam Classic Tour 5 Days offers an exciting and unforgettable journey through Vietnam. Over the course of five days, the tour allows guests to explore the beauty and culture of this amazing country.",
+        "reviews": 4,
+        "imageShort": "./images/countries/vietnam/chanhoi.png",
+        "imageTour": "./images/countries/vietnam/tours/classic.png",
+        "tourId": 3,
+        "price": 600
+      },
+      {
+        "tourName": "TOUR OF VIETNAMS INTERNATIONALS PARKS",
+        "description": "Experience the awe-inspiring beauty of Vietnam's national parks on this immersive tour. From lush jungles teeming with diverse wildlife to majestic waterfalls and breathtaking mountain landscapes, you'll be surrounded by nature's wonders at every turn, creating memories that will last a lifetime.",
+        "reviews": 5,
+        "imageShort": "./images/countries/vietnam/hoshimi.png",
+        "imageTour": "./images/countries/vietnam/tours/parks.png",
+        "tourId": 4,
+        "price": 700
+      }
+    ],
+    "reasonsImages": [
+      "./images/countries/vietnam/reasons/reasons-1.png",
+      "./images/countries/vietnam/reasons/reasons-2.png",
+      "./images/countries/vietnam/reasons/reasons-3.png",
+      "./images/countries/vietnam/reasons/reasons-4.png",
+      "./images/countries/vietnam/reasons/reasons-5.png",
+      "./images/countries/vietnam/reasons/reasons-6.png"
+    ],
+    "reasons": [
+      "1.Experience the vibrant street food culture and indulge in delicious Vietnamese cuisine.",
+      "2.Explore the stunning natural landscapes, from the picturesque Halong Bay to the scenic rice terraces of Sapa.",
+      "3.Immerse yourself in the rich history and ancient traditions of Vietnam by visiting historical sites and cultural landmarks.",
+      "4.Encounter the warm hospitality and friendly smiles of the Vietnamese people, creating lasting memories and connections.",
+      "5.Witness the unique fusion of old and new, as Vietnam combines traditional charm with modern development, creating a dynamic and captivating atmosphere."
+    ]
+  },
+  {
+    "countryId": 2,
+    "name": "Japan",
+    "countryDescription": "Japan is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
+    "backgroundImage": "./images/countries/japan/background.png",
+    "bestTours": [
+      {
+        "tourName": "Chinso,Vietnam",
+        "reviews": 5,
+        "image": "./images/countries/japan/chinso.png",
+        "tourId": 6
+      },
+      {
+        "tourName": "Fuji,Japan",
+        "reviews": 5,
+        "image": "./images/countries/japan/fuji.png",
+        "tourId": 7
+      },
+      {
+        "tourName": "Chanhoi,Japan",
+        "reviews": 4,
+        "image": "./images/countries/japan/chanhoi.png",
+        "tourId": 8
+      },
+      {
+        "tourName": "Hoshimi,Japan",
+        "reviews": 5,
+        "image": "./images/countries/japan/hoshimi.png",
+        "tourId": 9
+      },
+      {
+        "tourName": "Tochigi,Japan",
+        "reviews": 4,
+        "image": "./images/countries/japan/tochigi.png",
+        "tourId": 10
+      }
+    ]
+  }
 ]
-  

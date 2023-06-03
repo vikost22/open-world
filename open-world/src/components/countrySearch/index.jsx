@@ -13,7 +13,7 @@ export default function CountrySearch(props) {
               className="country-search__country"
               key={country.countryId}
               onClick={() => {
-                props.setCountry(country.countryId);
+                props.setCountry(country);
                 props.openSearch();
               }}
             >
