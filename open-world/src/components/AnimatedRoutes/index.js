@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import Continent from "../../pages/Continent";
 import Sign from "../../pages/Sign";
 import Register from "../../pages/Register";
+import { AboutTour } from "../AboutTour";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -18,6 +19,7 @@ export default function AnimatedRoutes() {
         <Route path="/login" element={<Sign />} />
         <Route path="/register" element={<Register />} />
         {/* <Route path="/country" element={<Country />} /> */}
+        <Route path="/about" element={<AboutTour />} />
       </Routes>
     </AnimatePresence>
   );
