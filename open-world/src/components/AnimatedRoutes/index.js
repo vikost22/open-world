@@ -9,6 +9,7 @@ import {
 } from "../../pages";
 import { AnimatePresence } from "framer-motion";
 import { AboutTour } from "../AboutTour";
+import { ForgotForm } from "../ForgotForm";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -24,6 +25,7 @@ export default function AnimatedRoutes() {
         {/* <Route path="/country" element={<Country />} /> */}
         <Route path="/about" element={<AboutTour />} />
         <Route path="/country" element={<Country />} />
+        <Route path="/forgot" element={<ForgotForm />} />
       </Routes>
     </AnimatePresence>
   );

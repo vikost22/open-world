@@ -45,8 +45,7 @@ export default function CountriesChoise() {
         transition: { duration: 0.3 },
       }}
       className="country-choise"
-      style={{ backgroundImage: `url( ${country.backgroundImage} )` }}
-    >
+      style={{ backgroundImage: `url( ${country.backgroundImage} )` }}>
       <div className="container country-choise__container">
         <div className="country-choise__info">
           <p className="country-choise__subtitle">travel to</p>
@@ -61,8 +60,7 @@ export default function CountriesChoise() {
             <div
               className={`country-search-wraper ${
                 searchModalState && "country-search-wraper--active"
-              }`}
-            >
+              }`}>
               <CountrySearch
                 isOpen={searchModalState}
                 countries={data || []}

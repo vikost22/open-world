@@ -1,11 +1,14 @@
-import { addToFavorites, removeFromFavorites } from "../../redux/features/tours/toursSlice";
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from "../../redux/features/tours/toursSlice";
 import { useDispatch, useSelector } from "react-redux";
 export default function TourItem(props) {
   const { imageShort, reviews, tourName, tourId, size } = props;
   const dispatch = useDispatch();
   const addedToFav = useSelector((state) => state.tours.likedTours);
   const isAdded = addedToFav.find((tour) => tour.tourId === tourId);
-  
+
   const reviewStars = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= reviews) {
@@ -13,6 +16,7 @@ export default function TourItem(props) {
         <img
           src={"./images/icons/countries/review-star-active.svg"}
           className="tour__star"
+          alt=""
         />
       );
       continue;
@@ -23,14 +27,15 @@ export default function TourItem(props) {
         className="tour__star"
         width={12}
         height={12}
+        alt=""
       />
     );
   }
   function toggleToFavorites() {
     if (!isAdded) {
       dispatch(addToFavorites(props));
-    }else{
-      dispatch(removeFromFavorites( tourId ));
+    } else {
+      dispatch(removeFromFavorites(tourId));
     }
   }
   return (

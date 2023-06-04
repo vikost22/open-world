@@ -70,9 +70,9 @@ export function LoginForm() {
               />
               Keep me signed in
             </label>
-            <a href="#" className="forgot--link">
+            <Link to="/forgot" className="forgot--link">
               Forgot password?
-            </a>
+            </Link>
           </div>
           <div className="btn__wrapper">
             <button
