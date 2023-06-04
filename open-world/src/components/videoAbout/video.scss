@@ -1,6 +1,8 @@
 .video-about {
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 96px;
+    padding-bottom: 181px;
   &__text {
     @include mixins.textStyle(64px, 72px, 700, $textColorWhite);
   }
@@ -13,18 +15,6 @@
       content: url("../../../public/images/icons/countries/video-play.svg");
       margin-right: 12px;
     }
-  }
-  &__content {
-    padding-top: 96px;
-    padding-bottom: 181px;
-    background: linear-gradient(
-      178.58deg,
-      #1b2920 4.74%,
-      rgba(38, 78, 54, 0) 43.95%,
-      rgba(49, 62, 54, 0.38) 64.91%,
-      rgba(27, 41, 32, 0.99) 96.81%,
-      #1b2920 102.33%
-    );
   }
   &__container {
     @include mixins.flex(row, space-between, flex-start, wrap);
