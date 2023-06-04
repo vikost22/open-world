@@ -1,10 +1,13 @@
 import { useLocation, Routes, Route } from "react-router-dom";
-import { ChooseCountry } from "../../pages";
-import Home from "../../pages/Home";
+import {
+  ChooseCountry,
+  Continent,
+  Country,
+  Home,
+  Register,
+  Sign,
+} from "../../pages";
 import { AnimatePresence } from "framer-motion";
-import Continent from "../../pages/Continent";
-import Sign from "../../pages/Sign";
-import Register from "../../pages/Register";
 import { AboutTour } from "../AboutTour";
 
 export default function AnimatedRoutes() {
@@ -20,6 +23,7 @@ export default function AnimatedRoutes() {
         <Route path="/register" element={<Register />} />
         {/* <Route path="/country" element={<Country />} /> */}
         <Route path="/about" element={<AboutTour />} />
+        <Route path="/country" element={<Country />} />
       </Routes>
     </AnimatePresence>
   );

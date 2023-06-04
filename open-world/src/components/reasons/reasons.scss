@@ -1,0 +1,71 @@
+.reasons {
+  background-color: $pageColor;
+  padding-top: 44px;
+  padding-bottom: 104px;
+}
+
+.reasons__title {
+  @include mixins.textStyle(32px, 40px, 400, $accentColor);
+  text-align: center;
+}
+
+.reasons__subtitle {
+  @include mixins.textStyle(40px, 48px, 400, $textColorWhite);
+  max-width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+}
+
+.reasons__container {
+  @include mixins.flex(row, center, flex-start, nowrap);
+  margin-top: 56px;
+}
+
+.first-images {
+  @include mixins.flex(row, flex-end, center, nowrap);
+}
+.second-images {
+  @include mixins.flex(row, flex-start, center, nowrap);
+}
+
+.firstImage {
+  position: relative;
+  left: 174px;
+}
+.secondImage {
+  position: relative;
+}
+.thirdImage {
+  position: relative;
+}
+.fourthImage {
+  position: relative;
+  z-index: 2;
+}
+.fifthImage {
+  position: relative;
+  z-index: 2;
+}
+.sixthImage {
+  position: relative;
+  right: 156px;
+}
+
+.reasons__text-item {
+  max-width: 474px;
+  @include mixins.textStyle(20px, 28px, 400, $textColorWhite);
+  margin-top: 20px;
+}
+
+.reasons__left-part {
+  border-right: 2px solid $additionalColor;
+  padding-right: 32px;
+  @include mixins.flex(column, center, flex-end, nowrap);
+}
+
+.reasons__right-part {
+    padding-left: 32px;
+    @include mixins.flex(column, center, flex-start, nowrap);
+  }

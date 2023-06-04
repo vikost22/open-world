@@ -1,0 +1,50 @@
+.country__background {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.country__intro {
+  padding-top: 168px;
+  padding-bottom: 259px;
+  background: linear-gradient(
+    179.51deg,
+    #1b2920 0.42%,
+    rgba(38, 78, 54, 0) 37.98%,
+    rgba(49, 62, 54, 0.38) 62.73%,
+    #1b2920 93.89%
+  );
+}
+
+.country__title-info {
+  margin-left: 179px;
+}
+
+.country__title {
+  @include mixins.textStyle(88px, 88px, 700, $textColorWhite);
+  max-width: 370px;
+}
+
+.country__subtitle {
+  @include mixins.textStyle(24px, 40px, 500, $additionalColor);
+  margin-top: 10px;
+}
+
+.country__description {
+  @include mixins.textStyle(14px, 24px, 600, $textColorWhite);
+  max-width: 575px;
+  margin-top: 10px;
+}
+
+.country-top-tours {
+  padding-top: 8px;
+  padding-bottom: 12px;
+  background-color: #1b2920;
+  &__title {
+    @include mixins.textStyle(24px, 40px, 500, $textColorWhite);
+    text-align: center;
+  }
+  &__tours {
+    @include mixins.flex(row, center, flex-start, wrap);
+    column-gap: 20px;
+    margin-top: 24px;
+  }
+}

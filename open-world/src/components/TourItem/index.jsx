@@ -1,7 +1,7 @@
 import { addToFavorites, removeFromFavorites } from "../../redux/features/tours/toursSlice";
 import { useDispatch, useSelector } from "react-redux";
 export default function TourItem(props) {
-  const { image, reviews, title, tourId, size } = props;
+  const { imageShort, reviews, tourName, tourId, size } = props;
   const dispatch = useDispatch();
   const addedToFav = useSelector((state) => state.tours.likedTours);
   const isAdded = addedToFav.find((tour) => tour.tourId === tourId);
@@ -13,7 +13,6 @@ export default function TourItem(props) {
         <img
           src={"./images/icons/countries/review-star-active.svg"}
           className="tour__star"
-          alt={title}
         />
       );
       continue;
@@ -24,13 +23,12 @@ export default function TourItem(props) {
         className="tour__star"
         width={12}
         height={12}
-        alt={title}
       />
     );
   }
   function toggleToFavorites() {
     if (!isAdded) {
-      dispatch(addToFavorites({ image, reviews, title, tourId }));
+      dispatch(addToFavorites(props));
     }else{
       dispatch(removeFromFavorites( tourId ));
     }
@@ -45,13 +43,13 @@ export default function TourItem(props) {
       </button>
       <a href="#" className="tour__link">
         <img
-          src={image}
-          alt={title}
+          src={imageShort}
+          alt={tourName}
           className="tour__image"
           width={166}
           height={215}
         />
-        <p className="tour__name">{title}</p>
+        <p className="tour__name">{tourName}</p>
         <div className="tour__stars">{reviewStars}</div>
       </a>
     </li>
