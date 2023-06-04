@@ -31,11 +31,11 @@ export function TourLocation(props) {
       <div className="container">
         <h3 className="about-page-title">{item.locationTitle}</h3>
         <div className="locations__wrapper">
-          <span
-            className="location-arrow left--arrow"
+          <button
+            className="location-btn left--arrow"
             onClick={() => handleLeft(item)}>
             <img src="./images/TourSection/arrowLeft.svg" alt="arrow-left" />
-          </span>
+          </button>
           {item.locationsPhoto.map((photo, index) => (
             <div
               className={`${
@@ -60,11 +60,11 @@ export function TourLocation(props) {
               </p>
             </div>
           ))}
-          <span
-            className="location-arrow right-arrow"
+          <button
+            className="location-btn right-arrow"
             onClick={() => handleRight(item)}>
             <img src="./images/TourSection/arrowRight.svg" alt="arrow-right" />
-          </span>
+          </button>
         </div>
       </div>
     </section>

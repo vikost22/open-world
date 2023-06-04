@@ -1,12 +1,12 @@
-import { Button } from "../Button";
-import StatusRoader from "../StatusRoader";
-import { useState } from "react";
 import Footer from "../footer";
 import { TourIntro } from "../../TourIntro";
 import { TourDescription } from "../TourDescription";
 import { TourLocation } from "../TourLocation";
 import { TripPlan } from "../TripPlan";
 import { TourEquipment } from "../TourEquipment";
+import { TourReviews } from "../TourReviews";
+import { TourBook } from "../TourBook";
+import React from "react";
 export function AboutTour() {
   const mochObj = [
     {
@@ -59,18 +59,35 @@ export function AboutTour() {
         "./images/TourSection/equipment/2.png",
         "./images/TourSection/equipment/3.png",
       ],
+      reviews: [
+        "I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable, tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+        "2  thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+        "3 I recently embarked camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+        "4 I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable,  The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+        "5 , tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+      ],
+      reviewersPhoto: [
+        "./images/TourSection/reviews/1.png",
+        "./images/TourSection/reviews/2.png",
+        "./images/TourSection/reviews/3.png",
+        "./images/TourSection/reviews/4.png",
+        "./images/TourSection/reviews/5.png",
+      ],
+      bookTourImg: "./images/TourSection/book/BookBack.png",
     },
   ];
   return (
     <>
       {mochObj.map((item, index) => (
-        <>
-          <TourIntro item={item} index={index} />
-          <TourDescription item={item} index={index} />
-          <TourLocation item={item} index={index} />
-          <TripPlan item={item} index={index} />
-          <TourEquipment item={item} index={index} />
-        </>
+        <React.Fragment key={index}>
+          <TourIntro item={item} />
+          <TourDescription item={item} />
+          <TourLocation item={item} />
+          <TripPlan item={item} />
+          <TourEquipment item={item} />
+          <TourReviews item={item} />
+          <TourBook item={item} />
+        </React.Fragment>
       ))}
 
       <Footer />
