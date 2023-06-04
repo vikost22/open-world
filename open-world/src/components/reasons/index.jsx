@@ -29,6 +29,27 @@ export default function Reasons(props) {
           <li className="reasons__text-item">{reasons[4]}</li>
         </ul>
       </div>
+      <img
+        src="./images/icons/countries/bg-flower-1.svg"
+        alt=""
+        className="bg-flower-1"
+        width={585}
+        height={493}
+      />
+      <img
+        src="./images/icons/countries/bg-flower-2.svg"
+        alt=""
+        className="bg-flower-2"
+        width={613}
+        height={620}
+      />
+      <img
+        src="./images/icons/countries/bg-flower-3.svg"
+        alt=""
+        className="bg-flower-3"
+        width={216}
+        height={214}
+      />
     </section>
   );
 }
