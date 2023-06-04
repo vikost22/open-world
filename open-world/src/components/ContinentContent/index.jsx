@@ -11,7 +11,7 @@ import { useGetAllCountriesQuery } from "../../redux/services/countriesApi";
 export function ContinentContent(props) {
   const dispatch = useDispatch();
   const { data } = useGetAllCountriesQuery("");
-  const [activeIndex, setActiveIndex] = useState(0); // Початково активний елемент - перший
+  const [activeIndex, setActiveIndex] = useState(0);
   const [activeBack, setActiveBack] = useState(
     "../../../public/images/continent/Asia/asiaBack.png"
   );

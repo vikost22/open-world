@@ -17,7 +17,6 @@ export function TourBook(props) {
             <Button
               text="Book Tour"
               backgroundColor="#F0E33F"
-              padding="6px 56px"
               color="#1E1E1E"
             />
           </div>

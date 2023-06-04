@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import { FormWrapper } from "../FormWrapper";
+import { useState } from "react";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -17,6 +18,10 @@ export function LoginForm() {
     validationSchema: SignupSchema,
     onSubmit: () => {},
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const toggleShowPass = () => {
+    setShowPassword(!showPassword);
+  };
   return (
     <>
       <FormWrapper
@@ -34,6 +39,11 @@ export function LoginForm() {
               onBlur={formik.handleBlur}
               value={formik.values.email}
             />
+            <img
+              src="./images/login_page/emailSvg.svg"
+              alt="email"
+              className="form-icon"
+            />
           </label>
           {formik.touched.email && formik.errors.email ? (
             <div className="form-validation">{formik.errors.email}</div>
@@ -42,13 +52,33 @@ export function LoginForm() {
             Password
             <input
               className="form-input"
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               id="password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
             />
+            <img
+              src="./images/login_page/passSvg.svg"
+              alt="password"
+              className="form-icon"
+            />
+            {showPassword ? (
+              <img
+                className="form-icon toggle--pass"
+                src="./images/login_page/openPassword.png"
+                alt="open"
+                onClick={toggleShowPass}
+              />
+            ) : (
+              <img
+                className="form-icon toggle--pass"
+                src="./images/login_page/closePassword.png"
+                alt="close"
+                onClick={toggleShowPass}
+              />
+            )}
           </label>
           {formik.touched.password && formik.errors.password ? (
             <div className="form-validation">{formik.errors.password}</div>

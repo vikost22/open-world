@@ -1,5 +1,6 @@
 import { FormWrapper } from "../FormWrapper";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -39,9 +40,12 @@ export function ForgotForm() {
             onClick={formik.handleSubmit}
             type="submit"
             className="form-btn submit--btn">
-            Sign in
+            Send email
           </button>
         </div>
+        <Link to="/login" href="#" className="login-create create--link">
+          Sign in
+        </Link>
       </form>
     </FormWrapper>
   );

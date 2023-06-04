@@ -108,7 +108,7 @@ export function RegisterForm() {
             />
             <img
               src="./images/login_page/emailSvg.svg"
-              alt="password"
+              alt="email"
               className="form-icon"
             />
           </label>

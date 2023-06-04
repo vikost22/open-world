@@ -9,11 +9,17 @@
 }
 .continent-content__wrapper {
   @include mixins.flex(row, space-between, center, nowrap);
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 }
 .continent-text {
   @include mixins.flex(column, flex-start, flex-start, nowrap);
   max-width: 335px;
   margin-left: 152px;
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 }
 .continent-slider {
   font-weight: 600;
@@ -32,10 +38,28 @@
   &:hover {
     transform: scale(1.1);
   }
+  @media (max-width: 1200px) {
+    font-size: 60px;
+  }
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+  @media (max-width: 600px) {
+    font-size: 40px;
+  }
 }
 .continent-name {
-  @include mixins.textStyle(88px, 104px, 600, $textColorWhite);
+  @include mixins.textStyle(75px, 104px, 600, $textColorWhite);
   margin-bottom: 10px;
+  @media (max-width: 1200px) {
+    font-size: 60px;
+  }
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+  @media (max-width: 600px) {
+    font-size: 40px;
+  }
 }
 .continent-description {
   @include mixins.textStyle(14px, 24px, 600, $textColorWhite);

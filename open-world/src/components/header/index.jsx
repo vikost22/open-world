@@ -19,7 +19,8 @@ export default function Header() {
         </Link>
         {!user ? (
           location.pathname !== "/login" &&
-          location.pathname !== "/register" && (
+          location.pathname !== "/register" &&
+          location.pathname !== "/forgot" && (
             <Link to="/login">
               <Button
                 text="Log in"
@@ -35,8 +36,7 @@ export default function Header() {
             <div className="main-header__nav">
               <a
                 href="#"
-                className="main-header__nav-link main-header__nav-link--accent"
-              >
+                className="main-header__nav-link main-header__nav-link--accent">
                 Home
               </a>
               <a href="#" className="main-header__nav-link">

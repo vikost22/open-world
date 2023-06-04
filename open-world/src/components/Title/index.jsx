@@ -10,8 +10,7 @@ export function Title() {
       animate={{ x: "0", opacity: 1 }}
       exit={{
         transition: { duration: 0.3 },
-      }}
-    >
+      }}>
       <div className="container">
         <div className="title-wrapper">
           <h1 className="title-slogan">
@@ -21,6 +20,7 @@ export function Title() {
           </h1>
           <Link to={"/continent"}>
             <Button
+              className="project-btn"
               text="Started"
               backgroundColor="#F0E33F"
               color="#000000"

@@ -5,9 +5,17 @@
   min-height: 100vh;
   max-width: 100vw;
   color: $textColorWhite;
-  padding-top: 40px;
+  padding-top: 80px;
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    align-items: flex-start;
+  }
 }
+
 .form__wrapper {
   box-sizing: border-box;
   padding: 50px 60px;
@@ -16,10 +24,25 @@
   background: rgba(85, 54, 54, 0.11);
   box-shadow: 1px 1px 15px rgba(61, 61, 61, 0.61);
   border-radius: 20px;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    padding: 40px 50px;
+  }
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
 }
 .form__validation {
   margin-top: 15px;
   @include mixins.textStyle(20px, 20px, 500, #ff0000);
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 }
 .form-title {
   @include mixins.textStyle(24px, 20px, 500, inherit);
@@ -28,13 +51,22 @@
     display: block;
     margin-top: 15px;
     width: 100px;
-    border: 2px solid $accentColor;
+    border: 1px solid $accentColor;
     border-radius: 5px;
     margin-bottom: 10px;
+  }
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
   }
 }
 .form-description {
   @include mixins.textStyle(13px, 20px, 500, #bfbfbf);
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 .form {
   @include mixins.flex(column, flex-start, flex-start, nowrap);
@@ -47,8 +79,15 @@
   background: transparent;
   padding-top: 11px;
   padding-bottom: 8px;
+  font-size: 25px;
   border-bottom: 1px solid $textColorWhite;
   color: $textColorWhite;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
   &:focus {
     color: $textColorWhite;
   }
@@ -67,6 +106,15 @@
   padding: 30px;
   width: 100%;
   @include mixins.textStyle(12px, 14px, 500, $textColorWhite);
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 25px;
+  }
+  @media (max-width: 600px) {
+    padding: 20px;
+    font-size: 10px;
+  }
 }
 .form-icon {
   position: absolute;
@@ -83,6 +131,13 @@
 .forgot__wrapper {
   width: 100%;
   @include mixins.flex(row, space-between, center, nowrap);
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 }
 .toggle-btn {
   position: absolute;
@@ -135,6 +190,14 @@
   @include mixins.textStyle(16px, 20px, 500, #1e1e1e);
   border-radius: 12px;
   transition: 0.5s;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 .submit--btn {
   background: $accentColor;
@@ -143,6 +206,12 @@
     background: darken($accentColor, 50%);
     color: $textColorWhite;
   }
+  @media (max-width: 768px) {
+    padding: 8px 50px;
+  }
+  @media (max-width: 600px) {
+    padding: 8px 30px;
+  }
 }
 .google--sign {
   background-color: #fefefe;
@@ -150,6 +219,12 @@
   &:hover {
     background-color: darken(#fefefe, 50%);
     color: $textColorWhite;
+  }
+  @media (max-width: 768px) {
+    padding: 8px 25px;
+  }
+  @media (max-width: 600px) {
+    padding: 8px 15px;
   }
 }
 .google--sign::after {
@@ -162,16 +237,37 @@
   background-repeat: no-repeat;
   width: 22px;
   height: 22px;
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 .form-create {
   margin-top: 50px;
   text-align: center;
   @include mixins.textStyle(15px, 20px, 500, #fefefe);
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  @media (max-width: 600px) {
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 14px;
+  }
 }
 .create--link {
   margin-left: 10px;
+  margin-top: 10px;
   color: #4686e4;
+  font-size: 15px;
   &:hover {
     color: darken(#4686e4, 20%);
+  }
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+  @media (max-width: 600px) {
+    font-size: 11px;
   }
 }
