@@ -4,30 +4,43 @@ import TourItem from "../components/TourItem";
 import VideoAbout from "../components/videoAbout";
 import ToursSlider from "../components/ToursSlider";
 import Footer from "../components/footer";
+import { motion } from "framer-motion";
 import Reasons from "../components/reasons";
+import { useValidateCountry } from "../hooks/useValidateCountry";
 export function Country() {
   const country = useSelector((state) => state.countries.selectedCountry);
+  const isValidate = useValidateCountry(country);
+  if (!isValidate) return;
   return (
     <>
-      <section
-        className="country__background"
-        style={{ backgroundImage: `url(${country.backgroundImagePage})` }}
+      <motion.section
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: "0", opacity: 1 }}
+        exit={{
+          transition: { duration: 0.3 },
+        }}
+        className="country__intro"
+        style={{
+          backgroundImage: `linear-gradient(
+            179.51deg,
+            #1b2920 0.42%,
+            rgba(38, 78, 54, 0) 37.98%,
+            rgba(49, 62, 54, 0.38) 62.73%,
+            #1b2920 93.89%
+          ),url(${country.backgroundImagePage}) `,
+        }}
       >
-        <div className="country__intro">
-          <div className="container country__container">
-            <StatusRoader statusNumber={4} statusName="Select a tour" />
-            <div className="country__title-info">
-              <h1 className="country__title">Visit {country.name}</h1>
-              <h2 className="country__subtitle">
-                und get unforgettable emotions
-              </h2>
-              <p className="country__description">
-                {country.countryDescription}
-              </p>
-            </div>
+        <div className="container country__container">
+          <StatusRoader statusNumber={4} statusName="Select a tour" />
+          <div className="country__title-info">
+            <h1 className="country__title">Visit {country.name}</h1>
+            <h2 className="country__subtitle">
+              und get unforgettable emotions
+            </h2>
+            <p className="country__description">{country.countryDescription}</p>
           </div>
         </div>
-      </section>
+      </motion.section>
       <section className="country-top-tours">
         <h2 className="country-top-tours__title">POPULAR TOURS</h2>
         <ul className="country-top-tours__tours">

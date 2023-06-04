@@ -51,6 +51,7 @@
 
 .tour-slider-item {
   margin-bottom: 7px;
+  cursor: pointer;
   &__name {
     @include mixins.textStyle(16px, 32px, 500, $textColorWhite);
     margin-bottom: 8px;

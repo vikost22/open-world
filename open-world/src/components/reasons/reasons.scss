@@ -2,6 +2,8 @@
   background-color: $pageColor;
   padding-top: 44px;
   padding-bottom: 104px;
+  position: relative;
+  overflow: hidden
 }
 
 .reasons__title {
@@ -43,10 +45,12 @@
 .fourthImage {
   position: relative;
   z-index: 2;
+  right: 0;
 }
 .fifthImage {
   position: relative;
   z-index: 2;
+  right: 0;
 }
 .sixthImage {
   position: relative;
@@ -66,6 +70,22 @@
 }
 
 .reasons__right-part {
-    padding-left: 32px;
-    @include mixins.flex(column, center, flex-start, nowrap);
-  }
+  padding-left: 32px;
+  @include mixins.flex(column, center, flex-start, nowrap);
+}
+
+.bg-flower-1 {
+  position: absolute;
+  top: 68px;
+  left: -34px;
+}
+.bg-flower-2 {
+  position: absolute;
+  bottom: 166px;
+  right: 0;
+}
+.bg-flower-3 {
+  position: absolute;
+  bottom: 135px;
+  left: 176px;
+}

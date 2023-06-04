@@ -76,7 +76,7 @@ export default function ToursSlider(props) {
             >
               <p className="tour-slider-item__name">{firstTour.tourName}</p>
               <p className="tour-slider-item__descr">{firstTour.description}</p>
-              <a href="" className="tour-slider-item__more">
+              <a href="#" className="tour-slider-item__more">
                 See more
               </a>
             </li>
@@ -86,7 +86,7 @@ export default function ToursSlider(props) {
             >
               <p className="tour-slider-item__name">{prevTour.tourName}</p>
               <p className="tour-slider-item__descr">{prevTour.description}</p>
-              <a href="" className="tour-slider-item__more">
+              <a href="#" className="tour-slider-item__more">
                 See more
               </a>
             </li>
@@ -98,7 +98,7 @@ export default function ToursSlider(props) {
               <p className="tour-slider-item__descr">
                 {activeTour.description}
               </p>
-              <a href="" className="tour-slider-item__more">
+              <a href="#" className="tour-slider-item__more">
                 See more
               </a>
             </li>
@@ -108,7 +108,7 @@ export default function ToursSlider(props) {
             >
               <p className="tour-slider-item__name">{lastTour.tourName}</p>
               <p className="tour-slider-item__descr">{lastTour.description}</p>
-              <a href="" className="tour-slider-item__more">
+              <a href="#" className="tour-slider-item__more">
                 See more
               </a>
             </li>

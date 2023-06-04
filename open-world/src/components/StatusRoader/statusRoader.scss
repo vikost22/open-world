@@ -4,6 +4,9 @@
   left: 51px;
   @include mixins.flex(column, flex-start, center, wrap);
   row-gap: 38px;
+  @media (max-width: 825px) {
+    display: none;
+  }
 }
 .roads {
   max-width: 0;
@@ -68,6 +71,6 @@
 
 .status-name {
   @include mixins.textStyle(20px, 24px, 600, $textColorWhite);
-width: 105px;
-text-align: center;
+  width: 105px;
+  text-align: center;
 }

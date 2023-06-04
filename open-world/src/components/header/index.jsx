@@ -1,6 +1,7 @@
 import SearchForm from "../searchForm";
 import { Button } from "../Button";
 import { Link, useLocation } from "react-router-dom";
+import BurgerMenu from "../BurgerMenu";
 export default function Header() {
   const user = localStorage.getItem("user");
   const location = useLocation();
@@ -17,7 +18,7 @@ export default function Header() {
           />
           <span className="main-header__logo-name">OpenWorld</span>
         </Link>
-        {!user ? (
+        {user ? (
           location.pathname !== "/login" &&
           location.pathname !== "/register" && (
             <Link to="/login">
@@ -33,12 +34,12 @@ export default function Header() {
         ) : (
           <>
             <div className="main-header__nav">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="main-header__nav-link main-header__nav-link--accent"
               >
                 Home
-              </a>
+              </Link>
               <a href="#" className="main-header__nav-link">
                 My trips
               </a>
@@ -46,24 +47,25 @@ export default function Header() {
             <div className="main-header__user-menu user-menu">
               <SearchForm />
               <div className="user-menu__account">
-                <a href="" className="user-menu__account-link">
+                <Link className="user-menu__account-link">
                   <img
                     src="./images/icons/header/favorites-icon.svg"
                     className="user-menu__favorites-icon"
                     alt=""
                   />
-                </a>
-                <a href="#" className="user-menu__account-link">
+                </Link>
+                <Link className="user-menu__account-link">
                   <img
                     src="./images/icons/header/account-icon.svg"
                     className="user-menu__account-icon"
                     alt=""
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </>
         )}
+        <BurgerMenu/>
       </div>
     </header>
   );
