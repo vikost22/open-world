@@ -52,8 +52,7 @@ export function ContinentContent(props) {
         className="continent-section"
         style={{
           backgroundImage: `url(${activeBack})`,
-        }}
-      >
+        }}>
         <div className="container">
           <div className="continent-content__wrapper">
             <div className="continent-text">
@@ -78,10 +77,7 @@ export function ContinentContent(props) {
             </div>
             <div className="tours-review">
               {activeItem.tours.map((tour, index) => (
-                <TourItem
-                  {...tour}
-                  size="xl"
-                />
+                <TourItem {...tour} size="xl" />
               ))}
             </div>
           </div>
