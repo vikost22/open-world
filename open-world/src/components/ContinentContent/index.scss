@@ -17,7 +17,7 @@
   @include mixins.flex(column, flex-start, flex-start, nowrap);
   max-width: 335px;
   margin-left: 152px;
-  @media (max-width: 768px) {
+  @media (max-width: 825px) {
     margin-left: 0px;
   }
 }
