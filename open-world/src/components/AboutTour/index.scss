@@ -340,15 +340,18 @@
   height: 200px;
   border: 7px solid #f0e33f;
   @media (max-width: 992px) {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
   }
   @media (max-width: 768px) {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
   }
 }
-
+.reviewer__wrapper {
+  @include mixins.flex(row, center, center, nowrap);
+  gap: 20px;
+}
 //section 7
 
 .tour-book-section {
