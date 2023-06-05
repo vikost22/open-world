@@ -127,63 +127,84 @@
 }
 .locations__wrapper {
   margin-top: 56px;
-  @include mixins.flex(row, center, center, nowrap);
+  @include mixins.flex(row, center, flex-start, nowrap);
   gap: 28px;
   @media (max-width: 768px) {
     flex-wrap: wrap;
   }
 }
 .location-btn {
+  align-self: center;
   background-color: #fefefe;
   border-radius: 25px;
   height: 35px;
   width: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include mixins.flex(row, center, center, nowrap);
   cursor: pointer;
   transition: 0.4s;
   &:hover {
     transform: scale(1.1);
   }
-  @media (max-width: 992px) {
-    display: none;
+  @media (max-width: 1200px) {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
   }
 }
 .locations-tour__name {
   @include mixins.textStyle(16px, 32px, 400, #fefefe);
   text-align: center;
-  @media (max-width: 992px) {
-    font-size: 14px;
-  }
   @media (max-width: 768px) {
     font-size: 12px;
   }
 }
 .location-photo {
   transition: 0.5s;
-  @media (max-width: 1200px) {
-    width: 200px;
-    height: 250px;
+  width: 194px;
+  height: 291px;
+  &-active {
+    width: 250px;
+    height: 350px;
   }
-  @media (max-width: 992px) {
-    width: 150px;
-    height: 200px;
+  @media (max-width: 1200px) {
+    width: 140px;
+    height: 241px;
+    &-active {
+      width: 180px;
+      height: 280px;
+    }
+  }
+  @media (max-width: 993px) {
+    width: 250px;
+    height: 350px;
+  }
+  @media (max-width: 768px) {
+    width: 180px;
+    height: 280px;
+  }
+  @media (max-width: 443px) {
+    width: 140px;
+    height: 240px;
   }
 }
 .active-name {
   font-size: 32px;
   color: #fefefe;
   text-align: center;
+  color: #f0e33f;
   @media (max-width: 1200px) {
-    font-size: 24px;
+    font-size: 22px;
   }
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 .tour-content {
+  @include mixins.flex(column, center, center, nowrap);
   cursor: pointer;
+}
+.active-tour {
+  @include mixins.flex(column, center, center, nowrap);
 }
 //section 4
 .plan-section {

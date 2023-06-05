@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function TourLocation(props) {
   const { item } = props;
   const [selectedTour, setSelectedTour] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 993);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleTourClick = (index) => {
     setSelectedTour(index);
   };
@@ -36,30 +48,45 @@ export function TourLocation(props) {
             onClick={() => handleLeft(item)}>
             <img src="./images/TourSection/arrowLeft.svg" alt="arrow-left" />
           </button>
-          {item.locationsPhoto.map((photo, index) => (
-            <div
-              className={`${
-                index === selectedTour ? "active-tour" : "tour-content"
-              }`}
-              onClick={() => handleTourClick(index)}
-              key={index}>
+          {!isMobile ? (
+            item.locationsPhoto.map((photo, index) => (
+              <div
+                className={`${
+                  index === selectedTour ? "active-tour" : "tour-content"
+                }`}
+                onClick={() => handleTourClick(index)}
+                key={index}>
+                <img
+                  className={
+                    index === selectedTour
+                      ? "location-photo-active"
+                      : "location-photo"
+                  }
+                  src={photo}
+                  alt={photo}
+                />
+                <p
+                  className={`${
+                    index === selectedTour
+                      ? "active-name"
+                      : "locations-tour__name"
+                  }`}>
+                  {item.locations[index]}
+                </p>
+              </div>
+            ))
+          ) : (
+            <div className="tour-content">
               <img
                 className="location-photo"
-                src={photo}
-                alt={photo}
-                width={index === selectedTour ? 300 : 194}
-                height={index === selectedTour ? 450 : 291}
+                src={item.locationsPhoto[selectedTour]}
+                alt={item.locationsPhoto[selectedTour]}
               />
-              <p
-                className={`${
-                  index === selectedTour
-                    ? "active-name"
-                    : "locations-tour__name"
-                }`}>
-                {item.locations[index]}
+              <p className="locations-tour__name">
+                {item.locations[selectedTour]}
               </p>
             </div>
-          ))}
+          )}
           <button
             className="location-btn right-arrow"
             onClick={() => handleRight(item)}>
