@@ -12,15 +12,15 @@ export default function Reasons(props) {
             <img src={reasonsImages[0]} alt="" className="firstImage" />
             <img src={reasonsImages[1]} alt="" className="secondImage" />
           </li>
-          <li className="reasons__text-item">{reasons[2]}</li>
-          <li className="reasons__text-item">{reasons[3]}</li>
+          <li className="reasons__text-item">{reasons[0]}</li>
+          <li className="reasons__text-item">{reasons[1]}</li>
           <li className="reasons__image-item">
             <img src={reasonsImages[2]} alt="" className="thirdImage" />
           </li>
         </ul>
         <ul className="reasons__right-part">
-          <li className="reasons__text-item">{reasons[0]}</li>
-          <li className="reasons__text-item">{reasons[1]}</li>
+          <li className="reasons__text-item">{reasons[2]}</li>
+          <li className="reasons__text-item">{reasons[3]}</li>
           <li className="reasons__image-item second-images">
             <img src={reasonsImages[3]} alt="" className="fourthImage" />
             <img src={reasonsImages[4]} alt="" className="fifthImage" />

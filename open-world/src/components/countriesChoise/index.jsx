@@ -27,8 +27,17 @@ export default function CountriesChoise() {
   function selectNewCountry(country) {
     dispatch(selectCountry(country));
   }
-  function openSearch() {
-    setSearchModalState(!searchModalState);
+  function openSearch(e) {
+    console.log(e.target.closest(".country-choise__country-name"));
+    if (
+      e.target.closest(".country-choise__country-name") ||
+      e.target.closest(".country-choise__btn-country")
+    ) {
+      setSearchModalState(!searchModalState);
+    }
+    if (searchModalState) {
+      setSearchModalState(!searchModalState);
+    }
   }
   useEffect(() => {
     if (data) {
@@ -45,7 +54,11 @@ export default function CountriesChoise() {
         transition: { duration: 0.3 },
       }}
       className="country-choise"
-      style={{ backgroundImage: `url( ${country.backgroundImage} )` }}>
+      style={{ backgroundImage: `url( ${country.backgroundImage} )` }}
+      onClick={(e) => {
+        openSearch(e);
+      }}
+    >
       <div className="container country-choise__container">
         <div className="country-choise__info">
           <p className="country-choise__subtitle">travel to</p>
@@ -55,12 +68,12 @@ export default function CountriesChoise() {
               className={`country-choise__btn-country ${
                 searchModalState && "country-choise__btn-country--active"
               }`}
-              onClick={openSearch}
             />
             <div
               className={`country-search-wraper ${
                 searchModalState && "country-search-wraper--active"
-              }`}>
+              }`}
+            >
               <CountrySearch
                 isOpen={searchModalState}
                 countries={data || []}
@@ -85,7 +98,7 @@ export default function CountriesChoise() {
           </Link>
         </div>
 
-        <h2 className="country-choise__tours-title">Top tour</h2>
+        <h2 className="country-choise__tours-title">Top tours</h2>
         <ul className="country-choise__top-tours">
           {country.bestTours &&
             country.bestTours.map((tour) => <TourItem {...tour} />)}

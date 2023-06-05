@@ -1,5 +1,5 @@
 import Footer from "../footer";
-import { TourIntro } from "../../TourIntro";
+import { TourIntro } from "../TourIntro";
 import { TourDescription } from "../TourDescription";
 import { TourLocation } from "../TourLocation";
 import { TripPlan } from "../TripPlan";

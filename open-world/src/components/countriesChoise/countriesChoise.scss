@@ -3,11 +3,15 @@
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding-top: 168px;
   transition-duration: 500ms;
   padding-bottom: 68px;
   &__info {
     margin-left: 152px;
+    @media (max-width: 825px) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -15,6 +19,9 @@
   @include mixins.textStyle(24px, 28px, 600, $textColorWhite);
   letter-spacing: 0.59em;
   user-select: none;
+  @media (max-width: 825px) {
+    font-size: 20px;
+  }
 }
 
 .country-choise__choose {
@@ -27,6 +34,12 @@
   @include mixins.textStyle(88px, 96px, 600, $textColorWhite);
   margin-right: 20px;
   user-select: none;
+  @media (max-width: 825px) {
+    font-size: 60px;
+  }
+  @media (max-width: 365px) {
+    font-size: 40px;
+  }
 }
 
 .country-choise__btn-country {
@@ -72,6 +85,9 @@
       left: 30px;
     }
   }
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .country-search-wraper {
@@ -82,8 +98,11 @@
   width: 320px;
   height: 0;
   transition-duration: 1s;
-  &--active{
+  &--active {
     height: 320px;
+  }
+  @media (max-width: 365px) {
+    width: 220px;
   }
 }
 
@@ -92,6 +111,9 @@
   max-width: 416px;
   margin-top: 12px;
   margin-bottom: 20px;
+  @media (max-width: 825px) {
+    font-size: 12px;
+  }
 }
 
 .country-choise__tours-title {

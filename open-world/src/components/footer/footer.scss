@@ -9,18 +9,14 @@
 
   &__logo-name {
     @include mixins.textStyle(20px, 24px, 400, $textColorWhite);
-    
   }
   &__container {
     @include mixins.flex(row, space-between, flex-start, wrap);
-    row-gap: 15px;
     column-gap: 20px;
-    @media (max-width: 975px) {
-      justify-content: center;
-    }
+    row-gap: 25px;
   }
   &__footer-links {
-    @include mixins.flex(row, center, flex-start, wrap);
+    @include mixins.flex(row, flex-start, flex-start, wrap);
     column-gap: 72px;
     row-gap: 15px;
   }
@@ -34,6 +30,6 @@
   }
 }
 
-.social-networks__link{
-    margin-left: 16px;
+.social-networks__link {
+  margin-left: 16px;
 }

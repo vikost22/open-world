@@ -22,7 +22,6 @@ export default function AnimatedRoutes() {
         <Route path="/countries" element={<ChooseCountry />} />
         <Route path="/login" element={<Sign />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="/country" element={<Country />} /> */}
         <Route path="/about" element={<AboutTour />} />
         <Route path="/country" element={<Country />} />
         <Route path="/forgot" element={<ForgotForm />} />

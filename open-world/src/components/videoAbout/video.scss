@@ -1,8 +1,9 @@
 .video-about {
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   padding-top: 96px;
-    padding-bottom: 181px;
+  padding-bottom: 181px;
   &__text {
     @include mixins.textStyle(64px, 72px, 700, $textColorWhite);
   }
@@ -20,21 +21,31 @@
     @include mixins.flex(row, space-between, flex-start, wrap);
   }
   &__video {
+    margin-top: 20px;
     border-radius: 16px;
   }
 }
 .text {
   &__first {
     color: $accentColor;
+    @media (max-width: 330px) {
+      font-size: 54px;
+    }
   }
 
   &__second {
     margin-top: 12px;
+    @media (max-width: 330px) {
+      font-size: 54px;
+    }
   }
 
   &__third {
     margin-top: 12px;
     color: transparent;
     -webkit-text-stroke: 3px $textColorWhite;
+    @media (max-width: 330px) {
+      font-size: 54px;
+    }
   }
 }

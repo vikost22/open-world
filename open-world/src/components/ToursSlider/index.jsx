@@ -31,7 +31,7 @@ export default function ToursSlider(props) {
       reviewStars.push(
         <img
           src={"./images/icons/countries/review-star-active.svg"}
-          className="tour__star-review "
+          className="tour__star-review tour__star-review--xl "
           width={40}
           height={40}
         />
@@ -41,7 +41,7 @@ export default function ToursSlider(props) {
     reviewStars.push(
       <img
         src={"./images/icons/countries/review-star.svg"}
-        className="tour__star-review "
+        className="tour__star-review tour__star-review--xl"
         width={40}
         height={40}
       />

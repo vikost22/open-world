@@ -8,9 +8,13 @@
   border-radius: 15px;
   transition-duration: 1000ms;
   padding-left: 24px;
+  padding-right: 24px;
   padding-top: 14px;
   &--active {
     top: 0;
+  }
+  @media (max-width: 365px) {
+    max-width: 215px;
   }
 }
 
