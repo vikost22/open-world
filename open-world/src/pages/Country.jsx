@@ -27,7 +27,8 @@ export function Country() {
             rgba(38, 78, 54, 0) 37.98%,
             rgba(49, 62, 54, 0.38) 62.73%,
             #1b2920 93.89%
-          ),url(${country.backgroundImagePage}) `,
+          ),url(${country.backgroundImagePage})`,
+          backgroundAttachment: "fixed"
         }}
       >
         <div className="container country__container">

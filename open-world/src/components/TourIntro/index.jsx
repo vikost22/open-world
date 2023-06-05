@@ -1,5 +1,5 @@
-import { Button } from "../components/Button";
-import StatusRoader from "../components/StatusRoader";
+import { Button } from "../Button";
+import StatusRoader from "../StatusRoader";
 
 export function TourIntro(props) {
   const { item, index } = props;

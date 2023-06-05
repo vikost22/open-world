@@ -8,10 +8,11 @@ export default function BurgerMenu() {
   }
   return (
     <>
-      <button
-        className={`burger__btn ${btnActive ? "burger__btn--active" : ""}`}
-        onClick={changeState}
-      ></button>
+      <button style={{height: 19+"px"}} onClick={changeState}>
+        <span
+          className={`burger__btn ${btnActive ? "burger__btn--active" : ""}`}
+        ></span>
+      </button>
       <ul className={`burger__list ${btnActive ? "burger__list--active" : ""}`}>
         <li>
           <Link to="/" className="burger__item" onClick={changeState}>
