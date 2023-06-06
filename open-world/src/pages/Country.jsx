@@ -28,7 +28,7 @@ export function Country() {
             rgba(49, 62, 54, 0.38) 62.73%,
             #1b2920 93.89%
           ),url(${country.backgroundImagePage})`,
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="container country__container">
@@ -54,7 +54,7 @@ export function Country() {
         background={country.backgroundImageVideo}
         videoLink={country.videoLink}
       />
-      <ToursSlider tours={country.tours} />
+      <ToursSlider />
       <Reasons
         reasonsImages={country.reasonsImages}
         reasons={country.reasons}

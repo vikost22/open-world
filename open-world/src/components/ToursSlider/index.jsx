@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { Button } from "../Button";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTour } from "../../redux/features/tours/toursSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function ToursSlider(props) {
-  const { tours } = props;
+  const { tours } = useSelector((state) => state.countries.selectedCountry);
   const [firstTour, setFirstTour] = useState(tours[0]);
   const [prevTour, setPrevTour] = useState(tours[1]);
   const [activeTour, setActiveTour] = useState(tours[2]);
   const [lastTour, setLastTour] = useState(tours[3]);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   function selectNewTour(itemID) {
     const clickIndex = tours.findIndex((tour) => tour.tourId === itemID);
     let firstIndex;
@@ -27,7 +32,7 @@ export default function ToursSlider(props) {
   }
   const reviewStars = [];
   for (let i = 1; i <= 5; i++) {
-    if (i <= activeTour.reviews) {
+    if (i <= activeTour.reviewsCount) {
       reviewStars.push(
         <img
           src={"./images/icons/countries/review-star-active.svg"}
@@ -64,7 +69,7 @@ export default function ToursSlider(props) {
           <div className="tour-slider__tour-info">
             <p className="tour-slider__tour-price">{activeTour.price}$</p>
             {reviewStars}
-            <p className="tour-slider__tour-name">{activeTour.tourName}</p>
+            <p className="tour-slider__tour-name">{activeTour.name}</p>
           </div>
         </div>
 
@@ -74,27 +79,24 @@ export default function ToursSlider(props) {
               className="tour-slider__tour-item tour-slider-item"
               onClick={() => selectNewTour(firstTour.tourId)}
             >
-              <p className="tour-slider-item__name">{firstTour.tourName}</p>
+              <p className="tour-slider-item__name">{firstTour.name}</p>
               <p className="tour-slider-item__descr">{firstTour.description}</p>
-              <a href="#" className="tour-slider-item__more">
-                See more
-              </a>
             </li>
             <li
               className="tour-slider__tour-item tour-slider-item"
               onClick={() => selectNewTour(prevTour.tourId)}
             >
-              <p className="tour-slider-item__name">{prevTour.tourName}</p>
+              <p className="tour-slider-item__name">{prevTour.name}</p>
               <p className="tour-slider-item__descr">{prevTour.description}</p>
-              <a href="#" className="tour-slider-item__more">
-                See more
-              </a>
             </li>
             <li
               className="tour-slider__tour-item tour-slider-item tour-slider-item--active"
-              onClick={() => selectNewTour(activeTour.tourId)}
+              onClick={() => {
+                dispatch(selectTour(activeTour));
+                navigate("/about");
+              }}
             >
-              <p className="tour-slider-item__name">{activeTour.tourName}</p>
+              <p className="tour-slider-item__name">{activeTour.name}</p>
               <p className="tour-slider-item__descr">
                 {activeTour.description}
               </p>
@@ -106,11 +108,8 @@ export default function ToursSlider(props) {
               className="tour-slider__tour-item tour-slider-item"
               onClick={() => selectNewTour(lastTour.tourId)}
             >
-              <p className="tour-slider-item__name">{lastTour.tourName}</p>
+              <p className="tour-slider-item__name">{lastTour.name}</p>
               <p className="tour-slider-item__descr">{lastTour.description}</p>
-              <a href="#" className="tour-slider-item__more">
-                See more
-              </a>
             </li>
             <li className="book-btn-wrap">
               <Button

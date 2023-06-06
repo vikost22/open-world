@@ -4,14 +4,14 @@ import {
 } from "../../redux/features/tours/toursSlice";
 import { useDispatch, useSelector } from "react-redux";
 export default function TourItem(props) {
-  const { imageShort, reviews, tourName, tourId, size } = props;
+  const { imageShort, reviewsCount, name, tourId, size } = props;
   const dispatch = useDispatch();
   const addedToFav = useSelector((state) => state.tours.likedTours);
   const isAdded = addedToFav.find((tour) => tour.tourId === tourId);
 
   const reviewStars = [];
   for (let i = 1; i <= 5; i++) {
-    if (i <= reviews) {
+    if (i <= reviewsCount) {
       reviewStars.push(
         <img
           src={"./images/icons/countries/review-star-active.svg"}
@@ -49,12 +49,12 @@ export default function TourItem(props) {
       <a href="#" className="tour__link">
         <img
           src={imageShort}
-          alt={tourName}
+          alt={name}
           className="tour__image"
           width={166}
           height={215}
         />
-        <p className="tour__name">{tourName}</p>
+        <p className="tour__name">{name}</p>
         <div className="tour__stars">{reviewStars}</div>
       </a>
     </li>

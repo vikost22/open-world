@@ -3,6 +3,7 @@ import StatusRoader from "../StatusRoader";
 
 export function TourIntro(props) {
   const { item, index } = props;
+  console.log(item);
   return (
     <section className="tour-intro" key={index}>
       <div className="intro__wrapper">

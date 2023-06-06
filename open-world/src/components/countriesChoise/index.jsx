@@ -8,6 +8,7 @@ import { Button } from "../Button";
 import { useGetCountriesByContinentQuery } from "../../redux/services/countriesApi";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCountry } from "../../redux/features/countries/countriesSlice";
+import { useValidateCountry } from "../../hooks/useValidateCountry";
 
 export default function CountriesChoise() {
   const dispatch = useDispatch();
@@ -23,7 +24,9 @@ export default function CountriesChoise() {
     name: "Page not found",
     countryDescription: "This page will be added soon",
   });
-
+  if (useValidateCountry(country)) {
+    selectNewCountry(country);
+  }
   function selectNewCountry(country) {
     dispatch(selectCountry(country));
   }
