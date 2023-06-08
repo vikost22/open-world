@@ -1,4 +1,8 @@
+import { useDispatch } from "react-redux";
+import { selectCountry } from "../../redux/features/countries/countriesSlice";
+
 export default function CountrySearch(props) {
+  const dispatch = useDispatch();
   return (
     <div
       className={`country-search ${
@@ -13,7 +17,7 @@ export default function CountrySearch(props) {
               className="country-search__country"
               key={country.countryId}
               onClick={() => {
-                props.setCountry(country.countryId);
+                dispatch(selectCountry(country));
                 props.openSearch();
               }}
             >

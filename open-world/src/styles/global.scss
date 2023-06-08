@@ -34,8 +34,11 @@ body {
 .container {
   @include mixins.marginCenter;
   max-width: 1440px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  @media (max-width: 825px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
-@import url("../components/Button/index.scss");
-@import url("../components/Title/index.scss");

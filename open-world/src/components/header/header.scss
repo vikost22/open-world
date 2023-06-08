@@ -3,29 +3,42 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   padding-top: 36px;
   padding-bottom: 10px;
   &__container {
-    @include mixins.flex(row, space-between, start, wrap);
+    @include mixins.flex(row, space-between, center, wrap);
+    column-gap: 15px;
+    row-gap: 15px;
   }
 }
 // Logo
 .main-header__logo {
-  @include mixins.flex(row, start, center, nowrap);
+  @include mixins.flex(row, flex-start, center, nowrap);
   column-gap: 8px;
-  & .main-header__logo-name {
-    @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
+  cursor: pointer;
+}
+.main-header__logo-name {
+  @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
+  user-select: none;
+  @media (max-width: 828px) {
+    font-size: 18px;
   }
 }
 // Nav
 .main-header__nav {
-  @include mixins.flex(row, start, center, nowrap);
+  @include mixins.flex(row, flex-start, center, nowrap);
   column-gap: 56px;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
 .main-header__nav-link {
   @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
+  @media (max-width: 828px) {
+    font-size: 18px;
+  }
 }
 .main-header__nav-link--accent {
   color: $accentColor;
@@ -33,12 +46,29 @@
 
 // User
 .user-menu {
-  @include mixins.flex(row, start, center, wrap);
+  @include mixins.flex(row, flex-start, center, wrap);
   column-gap: 41px;
+  row-gap: 15px;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
-
 .user-menu__account {
-  @include mixins.flex(row, start, center, nowrap);
+  @include mixins.flex(row, flex-start, center, nowrap);
   column-gap: 24px;
+}
+
+.user-menu__account-link {
+  position: relative;
+}
+.favorites-count {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  border-radius: 50%;
+  width: 20px;
+  background-color: $textColorWhite;
+  text-align: center;
+  line-height: 20px;
 }

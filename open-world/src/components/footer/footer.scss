@@ -3,7 +3,7 @@
   padding-bottom: 55px;
   background-color: $colorFooter;
   &__logo {
-    @include mixins.flex(row, start, center, nowrap);
+    @include mixins.flex(row, flex-start, center, nowrap);
     column-gap: 8px;
   }
 
@@ -11,11 +11,12 @@
     @include mixins.textStyle(20px, 24px, 400, $textColorWhite);
   }
   &__container {
-    @include mixins.flex(row, space-between, start, wrap);
-    row-gap: 15px;
+    @include mixins.flex(row, space-between, flex-start, wrap);
+    column-gap: 20px;
+    row-gap: 25px;
   }
   &__footer-links {
-    @include mixins.flex(row, center, start, wrap);
+    @include mixins.flex(row, flex-start, flex-start, wrap);
     column-gap: 72px;
     row-gap: 15px;
   }
@@ -29,6 +30,6 @@
   }
 }
 
-.social-networks__link{
-    margin-left: 16px;
+.social-networks__link {
+  margin-left: 16px;
 }
