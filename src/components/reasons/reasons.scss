@@ -1,0 +1,118 @@
+.reasons {
+  background-color: $pageColor;
+  padding-top: 44px;
+  padding-bottom: 104px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reasons__title {
+  @include mixins.textStyle(32px, 40px, 400, $accentColor);
+  text-align: center;
+  @media (max-width: 550px) {
+    font-size: 25px;
+  }
+}
+
+.reasons__subtitle {
+  @include mixins.textStyle(40px, 48px, 400, $textColorWhite);
+  max-width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+  @media (max-width: 550px) {
+    font-size: 30px;
+  }
+}
+
+.reasons__container {
+  @include mixins.flex(row, center, flex-start, nowrap);
+  margin-top: 56px;
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.first-images {
+  @include mixins.flex(row, flex-end, center, nowrap);
+}
+.second-images {
+  @include mixins.flex(row, flex-start, center, nowrap);
+}
+.reasons__image-item {
+  @media (max-width: 550px) {
+    display: none;
+  }
+}
+.firstImage {
+  position: relative;
+  left: 174px;
+}
+.secondImage {
+  position: relative;
+}
+.thirdImage {
+  position: relative;
+}
+.fourthImage {
+  position: relative;
+  z-index: 2;
+  right: 0;
+}
+.fifthImage {
+  position: relative;
+  z-index: 2;
+  right: 0;
+}
+.sixthImage {
+  position: relative;
+  right: 156px;
+}
+
+.reasons__text-item {
+  max-width: 474px;
+  @include mixins.textStyle(20px, 28px, 400, $textColorWhite);
+  margin-top: 20px;
+  @media (max-width: 550px) {
+    text-align: center;
+    border-bottom: 1px solid $accentColor;
+    padding-bottom: 15px;
+    font-size: 17px;
+  }
+}
+
+.reasons__left-part {
+  border-right: 2px solid $additionalColor;
+  padding-right: 32px;
+  @include mixins.flex(column, center, flex-end, nowrap);
+  @media (max-width: 825px) {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.reasons__right-part {
+  padding-left: 32px;
+  @include mixins.flex(column, center, flex-start, nowrap);
+  @media (max-width: 550px) {
+    padding-left: 0;
+  }
+}
+
+.bg-flower-1 {
+  position: absolute;
+  top: 68px;
+  left: -34px;
+}
+.bg-flower-2 {
+  position: absolute;
+  bottom: 166px;
+  right: 0;
+}
+.bg-flower-3 {
+  position: absolute;
+  bottom: 135px;
+  left: 176px;
+}
