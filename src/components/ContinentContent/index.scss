@@ -68,4 +68,7 @@
 .tours-review {
   @include mixins.flex(row, center, center, wrap);
   gap: 20px;
+  @media (max-width: 993px) {
+    padding-bottom: 40px;
+  }
 }
