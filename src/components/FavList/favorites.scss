@@ -1,0 +1,114 @@
+.fav-item {
+  @include mixins.flex(row, flex-start, flex-start, nowrap);
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+  padding-right: 36px;
+  position: relative;
+}
+
+.fav-item__image {
+  width: 206px;
+  height: 194px;
+  object-fit: cover;
+  border-radius: 16px;
+  @media (max-width: 658px) {
+    width: 170px;
+    height: 150px;
+  }
+  @media (max-width: 399px) {
+    width: 140px;
+    height: 120px;
+  }
+  @media (max-width: 359px) {
+    display: none;
+  }
+}
+
+.fav-item__info {
+  margin-top: 4px;
+  margin-left: 24px;
+  @include mixins.flex(column, space-between, flex-start, nowrap);
+  height: 185px;
+  max-width: 386px;
+  @media (max-width: 658px) {
+    height: 150px;
+  }
+  @media (max-width: 399px) {
+    height: 130px;
+  }
+  @media (max-width: 359px) {
+    height: 110px;
+  }
+}
+
+.fav-item__name {
+  @include mixins.textStyle(22px, 28px, 500, #2d2d2d);
+  @media (max-width: 658px) {
+    font-size: 18px;
+  }
+  @media (max-width: 399px) {
+    font-size: 14px;
+  }
+}
+.fav-item__review-stars {
+  @media (max-width: 448px) {
+    display: none;
+  }
+}
+.fav-item__price {
+  @include mixins.textStyle(28px, 26px, 500, #2d2d2d);
+  @media (max-width: 658px) {
+    font-size: 22px;
+  }
+  @media (max-width: 448px) {
+    display: none;
+  }
+}
+
+.fav-item__more {
+  @include mixins.textStyle(22px, 26px, 500, #2d2d2d);
+  padding: 5px 31px;
+  background-color: $accentColor;
+  border-radius: 8px;
+  @media (max-width: 658px) {
+    padding: 3px 20px;
+    font-size: 17px;
+  }
+  @media (max-width: 399px) {
+    font-size: 14px;
+  }
+}
+
+.remove-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  @include mixins.flex(row, center, center, nowrap);
+  border: 1px solid #b47b7b;
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+
+.remove-line {
+  background-color: #b47b7b;
+  display: block;
+  width: 12px;
+  height: 1px;
+  transform: rotate(45deg);
+  &::before {
+    content: "";
+    background-color: #b47b7b;
+    display: block;
+    width: 12px;
+    height: 1px;
+    transform: rotate(90deg);
+  }
+}
+
+.fav-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
