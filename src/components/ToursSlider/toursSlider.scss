@@ -1,0 +1,153 @@
+.tour-slider {
+  background-color: $pageColor;
+  padding-top: 8px;
+
+  &__title {
+    @include mixins.textStyle(32px, 40px, 400, $accentColor);
+    text-align: center;
+    @media (max-width: 575px) {
+      font-size: 25px;
+    }
+  }
+
+  &__subtitle {
+    @include mixins.textStyle(40px, 48px, 400, $textColorWhite);
+    text-align: center;
+    margin-top: 48px;
+    @media (max-width: 575px) {
+      font-size: 32px;
+    }
+  }
+  &__content {
+    position: relative;
+    margin-top: 65px;
+    @media (max-width: 750px) {
+      @include mixins.flex(column, center, center, nowrap);
+    }
+  }
+
+  &__image-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    @media (max-width: 750px) {
+      position: relative;
+      width: 100vw;
+    }
+  }
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  &__tour-info {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+  }
+  &__tour-price {
+    @include mixins.textStyle(40px, 48px, 500, $accentColor);
+    @media (max-width: 750px) {
+      font-size: 30px;
+    }
+  }
+  &__tour-name {
+    @include mixins.textStyle(24px, 48px, 400, $textColorWhite);
+    @media (max-width: 750px) {
+      font-size: 20px;
+    }
+  }
+  &__container {
+    @include mixins.flex(column, flex-start, flex-end, nowrap);
+    padding-bottom: 48px;
+    @media (max-width: 750px) {
+      align-items: start;
+    }
+  }
+  &__tours {
+    width: 50%;
+    padding-left: 40px;
+    @media (max-width: 750px) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}
+
+.tour-slider-item {
+  margin-bottom: 7px;
+  cursor: pointer;
+  user-select: none;
+  &__name {
+    @include mixins.textStyle(16px, 32px, 500, $textColorWhite);
+    margin-bottom: 8px;
+  }
+  &__descr {
+    @include mixins.textStyle(12px, 18px, 400, $textColorWhite);
+    margin-bottom: 8px;
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+  &__more {
+    @include mixins.textStyle(12px, 18px, 500, $textColorWhite);
+    &::after {
+      content: url("../../../public/images/icons/countries/tour-item-arrow.svg");
+      margin-left: 14px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.tour-slider-item--active {
+  background-color: $accentColor;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 76px;
+  padding-right: 176px;
+  border-radius: 8px;
+  margin-left: -140px;
+  & .tour-slider-item__name {
+    @include mixins.textStyle(20px, 32px, 500, $textColorWhite);
+    margin-bottom: 8px;
+  }
+  & .tour-slider-item__descr {
+    @include mixins.textStyle(14px, 18px, 400, $textColorWhite);
+    margin-bottom: 8px;
+  }
+  & .tour-slider-item__more {
+    @include mixins.textStyle(14px, 18px, 500, #295f34);
+    &::after {
+      content: url("../../../public/images/icons/countries/tour-item-arrow-active.svg");
+      margin-left: 14px;
+      position: relative;
+      top: 1px;
+    }
+  }
+  @media (max-width: 750px) {
+    margin-left: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 34px;
+    padding-right: 10px;
+  }
+}
+
+.book-btn-wrap {
+  @include mixins.flex(row, center, center, nowrap);
+  padding-top: 55px;
+}
+
+.tour__star-review {
+  margin-right: 12px;
+}
+
+.tour__star-review--xl {
+  @media (max-width: 750px) {
+    width: 20px;
+    height: 20px;
+  }
+}
