@@ -10,10 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCountry } from "../../redux/features/countries/countriesSlice";
 
 export default function CountriesChoise() {
-  const dispatch = useDispatch();
   const continentName = useSelector(
     (state) => state.countries.selectedContinent
   );
+  const dispatch = useDispatch();
   const { data } = useGetCountriesByContinentQuery(continentName);
   const selectedCountry = useSelector(
     (state) => state.countries.selectedCountry
