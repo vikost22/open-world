@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCountry } from "../../redux/features/countries/countriesSlice";
 
 export default function CountriesChoise() {
+  const dispatch = useDispatch();
   const continentName = useSelector(
     (state) => state.countries.selectedContinent
   );
@@ -22,7 +23,7 @@ export default function CountriesChoise() {
     name: "Page not found",
     countryDescription: "This page will be added soon",
   });
-  
+
   function openSearch(e) {
     if (
       e.target.closest(".country-choise__country-name") ||
@@ -36,6 +37,9 @@ export default function CountriesChoise() {
   }
   useEffect(() => {
     if (data) {
+      if (selectCountry) {
+        dispatch(selectCountry(data[0]));
+      }
       setCountry(
         data.find((country) => country.countryId === selectedCountry.countryId)
       );
