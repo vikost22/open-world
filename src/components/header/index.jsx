@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import BurgerMenu from "../BurgerMenu";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  favoriteContent,
   toggleModalState,
 } from "../../redux/features/modal/modalSlice";
 export default function Header() {

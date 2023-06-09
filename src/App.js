@@ -1,17 +1,16 @@
-import Header from './components/header';
-import { Routes, Route } from "react-router-dom";
-import { ChooseCountry } from './pages';
-import { Title } from "./components/Title";
+import Header from "./components/header";
+import { BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import FavModal from "./components/FavModal";
 
 function App() {
   return (
     <>
-    <Header/>
-    <Routes>
-      <Route path='/' element={<Title/>}/>
-      <Route path='/country' element={<ChooseCountry/>}/>
-    </Routes>
-
+      <Router>
+        <Header />
+        <AnimatedRoutes />
+        <FavModal />
+      </Router>
     </>
   );
 }

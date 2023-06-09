@@ -6,7 +6,7 @@ import { TripPlan } from "../TripPlan";
 import { TourEquipment } from "../TourEquipment";
 import { TourReviews } from "../TourReviews";
 import { TourBook } from "../TourBook";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { useValidateTour } from "../../hooks/useValidateTour";
 export function AboutTour() {

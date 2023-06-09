@@ -4,7 +4,6 @@ import TourItem from "../components/TourItem";
 import VideoAbout from "../components/videoAbout";
 import ToursSlider from "../components/ToursSlider";
 import Footer from "../components/footer";
-import { motion } from "framer-motion";
 import Reasons from "../components/reasons";
 import { useValidateCountry } from "../hooks/useValidateCountry";
 export function Country() {
