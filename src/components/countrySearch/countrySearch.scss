@@ -1,0 +1,36 @@
+.country-search {
+  z-index: 99;
+  width: 318px;
+  min-height: 320px;
+  position: absolute;
+  top: -350px;
+  background-color: $textColorWhite;
+  border-radius: 15px;
+  transition-duration: 1000ms;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 14px;
+  &--active {
+    top: 0;
+  }
+  @media (max-width: 365px) {
+    max-width: 215px;
+  }
+}
+
+.country-search__title {
+  @include mixins.textStyle(20px, 24px, 600, $textColorDark);
+  margin-bottom: 20px;
+}
+
+.country-search__country {
+  @include mixins.textStyle(20px, 24px, 400, $textColorDark);
+  transition-duration: 500ms;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  &:hover {
+    color: $accentColor;
+    font-weight: 500;
+    padding-left: 4px;
+  }
+}
