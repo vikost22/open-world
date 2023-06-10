@@ -11,7 +11,7 @@ export default function FavList() {
     if (likedTours.length <= 0 && isOpen) {
       dispatch(toggleModalState());
     }
-  }, [likedTours]);
+  }, [likedTours, dispatch, isOpen]);
   return (
     <ul className="fav-list">
       {likedTours.map((tour) => {

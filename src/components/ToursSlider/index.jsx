@@ -37,6 +37,7 @@ export default function ToursSlider(props) {
         <img
           src={"./images/icons/countries/review-star-active.svg"}
           className="tour__star-review tour__star-review--xl "
+          alt="star"
           width={40}
           height={40}
         />
@@ -49,6 +50,7 @@ export default function ToursSlider(props) {
         className="tour__star-review tour__star-review--xl"
         width={40}
         height={40}
+        alt="star"
       />
     );
   }
@@ -100,9 +102,9 @@ export default function ToursSlider(props) {
               <p className="tour-slider-item__descr">
                 {activeTour.description}
               </p>
-              <a href="#" className="tour-slider-item__more">
+              <p className="tour-slider-item__more">
                 See more
-              </a>
+              </p>
             </li>
             <li
               className="tour-slider__tour-item tour-slider-item"

@@ -61,7 +61,7 @@ export default function TourItem(props) {
           alt=""
         />
       </button>
-      <a href="#" className="tour__link">
+      <div className="tour__item-info">
         <img
           src={imageShort}
           alt={name}
@@ -71,7 +71,7 @@ export default function TourItem(props) {
         />
         <p className="tour__name">{name}</p>
         <div className="tour__stars">{reviewStars}</div>
-      </a>
+      </div>
     </li>
   );
 }

@@ -44,7 +44,7 @@ export default function CountriesChoise() {
         data.find((country) => country.countryId === selectedCountry.countryId)
       );
     }
-  }, [selectedCountry, data]);
+  }, [selectedCountry, data, dispatch]);
   return (
     <motion.section
       initial={{ x: "-100%", opacity: 0 }}

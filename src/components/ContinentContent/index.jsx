@@ -52,13 +52,14 @@ export function ContinentContent(props) {
         className="continent-section"
         style={{
           backgroundImage: `url(${activeBack})`,
-        }}>
+        }}
+      >
         <div className="container">
           <div className="continent-content__wrapper">
             <div className="continent-text">
-              <a href="#" className="continent-slider" onClick={handlePrev}>
+              <h2 className="continent-slider" onClick={handlePrev}>
                 {prevItem ? prevItem.name : data[data.length - 1].name}
-              </a>
+              </h2>
               <h2 className="continent-name">{activeItem.name}</h2>
               <h2 className="continent-description">{activeItem.text}</h2>
               <Link to="/countries" onClick={selectNewContinent}>
@@ -71,13 +72,13 @@ export function ContinentContent(props) {
                   size="24px"
                 />
               </Link>
-              <a href="#" className="continent-slider" onClick={handleNext}>
+              <h2 className="continent-slider" onClick={handleNext}>
                 {nextItem ? nextItem.name : data[0].name}
-              </a>
+              </h2>
             </div>
             <div className="tours-review">
               {activeItem.tours.map((tour, index) => (
-                <TourItem {...tour} size="xl" key={index}/>
+                <TourItem {...tour} size="xl" key={index} />
               ))}
             </div>
           </div>
