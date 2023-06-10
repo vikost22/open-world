@@ -127,5 +127,6 @@
 .country-choise__top-tours {
   @include mixins.flex(row, center, flex-start, wrap);
   column-gap: 20px;
+  row-gap: 20px;
   margin-top: 28px;
 }
