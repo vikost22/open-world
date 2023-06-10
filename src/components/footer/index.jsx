@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="main-footer">
@@ -15,58 +17,50 @@ export default function Footer() {
         <div className="main-footer__footer-links">
           <ul className="main-footer__links">
             <li className="main-footer__links-title">INFORMATION</li>
-            <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
-                About us
-              </a>
-            </li>
-            <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
-                Search
-              </a>
-            </li>
+            <Link className="main-footer__link">About us</Link>
+            <Link className="main-footer__link">Search</Link>
           </ul>
           <ul className="main-footer__links">
             <li className="main-footer__links-title">HELPFUL LINKS</li>
-            <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
-                Tours
-              </a>
-            </li>
-            <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
-                Supports
-              </a>
-            </li>
-            <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
-                Privecy
-              </a>
-            </li>
+            <Link className="main-footer__link">Tours</Link>
+            <Link className="main-footer__link">Supports</Link>
+            <Link className="main-footer__link">Privecy</Link>
           </ul>
           <ul className="main-footer__links">
             <li className="main-footer__links-title">CONTACTS</li>
             <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
+              <a href="tel:+491605633778" className="main-footer__link">
                 +491605633778
               </a>
             </li>
             <li className="main-footer__link-item">
-              <a href="#" className="main-footer__link">
-                openworld@mail.com{" "}
+              <a href="mailto:openworld@mail.com" className="main-footer__link">
+                openworld@mail.com
               </a>
             </li>
           </ul>
         </div>
         <div className="social-networks">
-          <a href="#" className="social-networks__link">
-            <img src="./images/icons/footer/twitter-logo.svg" alt="twitt" className="social-networks__icon" />
+          <a href="https://twitter.com/" className="social-networks__link">
+            <img
+              src="./images/icons/footer/twitter-logo.svg"
+              alt="twitt"
+              className="social-networks__icon"
+            />
           </a>
-          <a href="#" className="social-networks__link">
-            <img src="./images/icons/footer/facebook-logo.svg" alt="facebook" className="social-networks__icon" />
+          <a href="https://www.facebook.com/" className="social-networks__link">
+            <img
+              src="./images/icons/footer/facebook-logo.svg"
+              alt="facebook"
+              className="social-networks__icon"
+            />
           </a>
-          <a href="#" className="social-networks__link">
-            <img src="./images/icons/footer/insta-logo.svg" alt="insta" className="social-networks__icon" />
+          <a href="https://www.instagram.com/" className="social-networks__link">
+            <img
+              src="./images/icons/footer/insta-logo.svg"
+              alt="insta"
+              className="social-networks__icon"
+            />
           </a>
         </div>
       </div>

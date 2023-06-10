@@ -51,9 +51,9 @@ export default function Header() {
               >
                 Home
               </Link>
-              <a href="#" className="main-header__nav-link">
+              <Link to={'/mytrips'} className="main-header__nav-link">
                 My trips
-              </a>
+              </Link>
             </div>
             <div className="main-header__user-menu user-menu">
               <SearchForm />
