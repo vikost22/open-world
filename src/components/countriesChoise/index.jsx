@@ -37,7 +37,7 @@ export default function CountriesChoise() {
   }
   useEffect(() => {
     if (data) {
-      if (selectCountry) {
+      if (!selectedCountry) {
         dispatch(selectCountry(data[0]));
       }
       setCountry(
