@@ -33,7 +33,12 @@
     display: none;
   }
 }
-
+.header--log-btn {
+  margin-left: auto;
+  @media (max-width: 701px) {
+    display: none;
+  }
+}
 .main-header__nav-link {
   @include mixins.textStyle(24px, 32px, 400, $textColorWhite);
   @media (max-width: 828px) {
@@ -49,6 +54,7 @@
   @include mixins.flex(row, flex-start, center, wrap);
   column-gap: 41px;
   row-gap: 15px;
+  flex-grow: 1;
   @media (max-width: 700px) {
     display: none;
   }

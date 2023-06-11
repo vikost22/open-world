@@ -10,10 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 600px) {
-    align-items: flex-start;
-  }
 }
 
 .form__wrapper {
@@ -122,6 +118,11 @@
   top: 45%;
   width: 20px;
   height: 20px;
+  @media (max-width: 993px) {
+    width: 15px;
+    height: 15px;
+    top: 50%;
+  }
 }
 .toggle--pass {
   cursor: pointer;
