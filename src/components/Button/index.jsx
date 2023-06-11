@@ -2,6 +2,7 @@ export function Button(props) {
   return (
     <>
       <button
+        className={`project-btn ${props.className}`}
         style={{
           backgroundColor: props.backgroundColor,
           border: props.border,
@@ -15,8 +16,7 @@ export function Button(props) {
           e.target.style.backgroundColor = props.backgroundColor;
           e.target.style.color = props.color;
         }}
-        onClick={props.click}
-        className="project-btn">
+        onClick={props.click}>
         {props.text}
       </button>
     </>

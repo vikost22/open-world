@@ -1,22 +1,32 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormWrapper } from "../FormWrapper";
 import { useState } from "react";
-
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
   password: Yup.string().required("Password is required"),
 });
 
 export function LoginForm() {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     validationSchema: SignupSchema,
-    onSubmit: () => {},
+    onSubmit: () => {
+      if (
+        formik.values.email === "admin@gmail.com" &&
+        formik.values.password === "admin"
+      ) {
+        localStorage.setItem("user", "admin");
+        navigate("/");
+      } else {
+        return false;
+      }
+    },
   });
   const [showPassword, setShowPassword] = useState(false);
   const toggleShowPass = () => {

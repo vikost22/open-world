@@ -2,10 +2,14 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleModalState } from "../../redux/features/modal/modalSlice";
-
 export default function BurgerMenu() {
+  const user = localStorage.getItem("user");
   const [btnActive, setBtnActive] = useState(false);
   function changeState() {
+    setBtnActive(!btnActive);
+  }
+  function handleLogout() {
+    localStorage.setItem("user", "");
     setBtnActive(!btnActive);
   }
   const likedTours = useSelector((state) => state.tours.likedTours);
@@ -19,13 +23,11 @@ export default function BurgerMenu() {
       <button
         style={{ height: 19 + "px" }}
         onClick={changeState}
-        className="burger__btn"
-      >
+        className="burger__btn">
         <span
           className={`burger__btn-line ${
             btnActive ? "burger__btn-line--active" : ""
-          }`}
-        ></span>
+          }`}></span>
       </button>
       <ul className={`burger__list ${btnActive ? "burger__list--active" : ""}`}>
         <li>
@@ -39,12 +41,25 @@ export default function BurgerMenu() {
           </Link>
         </li>
         <li>
-          <Link className="burger__item" onClick={showFavorites}>Favorites</Link>
+          <Link className="burger__item" onClick={showFavorites}>
+            Favorites
+          </Link>
         </li>
         <li>
           <Link className="burger__item" onClick={changeState}>
             Account
           </Link>
+        </li>
+        <li>
+          {user ? (
+            <Link className="burger__item" onClick={handleLogout}>
+              Log out
+            </Link>
+          ) : (
+            <Link className="burger__item" to="/login" onClick={changeState}>
+              Log in
+            </Link>
+          )}
         </li>
       </ul>
     </>
