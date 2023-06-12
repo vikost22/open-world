@@ -34,13 +34,15 @@ export default function CountriesChoise() {
   }
   useEffect(() => {
     if (data) {
-      setCountry(
-        data.find(
-          (country) =>
-            country.countryId ===
-            (selectedCountry ? selectedCountry.countryId : data[0].countryId)
-        )
-      );
+      if (!selectedCountry) {
+        setCountry(data[0]);
+      } else {
+        setCountry(
+          data.find(
+            (country) => country.countryId === selectedCountry.countryId
+          )
+        );
+      }
       dispatch(selectCountry(country));
     }
   }, [selectedCountry, data, dispatch, country]);
@@ -80,6 +82,7 @@ export default function CountriesChoise() {
                     isOpen={searchModalState}
                     countries={data || []}
                     openSearch={setSearchModalState}
+                    setCountry={setCountry}
                   />
                 </div>
               </div>

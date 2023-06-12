@@ -36,8 +36,8 @@ export function Country() {
       <section className="country-top-tours">
         <h2 className="country-top-tours__title">POPULAR TOURS</h2>
         <ul className="country-top-tours__tours">
-          {country.bestTours.map((tour) => (
-            <TourItem {...tour} />
+          {country.bestTours.map((tour, index) => (
+            <TourItem {...tour} key={index} />
           ))}
         </ul>
       </section>
@@ -49,6 +49,7 @@ export function Country() {
       <Reasons
         reasonsImages={country.reasonsImages}
         reasons={country.reasons}
+        name = {country.name}
       />
       <Footer />
     </>

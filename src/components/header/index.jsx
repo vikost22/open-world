@@ -41,7 +41,8 @@ export default function Header() {
             <div className="main-header__nav">
               <Link
                 to="/"
-                className="main-header__nav-link main-header__nav-link--accent">
+                className="main-header__nav-link main-header__nav-link--accent"
+              >
                 Home
               </Link>
               <Link to={"/mytrips"} className="main-header__nav-link">
@@ -53,11 +54,14 @@ export default function Header() {
               <div className="user-menu__account">
                 <Link
                   className="user-menu__account-link"
-                  onClick={showFavorites}>
+                  onClick={showFavorites}
+                >
                   <img
                     src="./images/icons/header/favorites-icon.svg"
                     className="user-menu__favorites-icon"
                     alt=""
+                    width={32}
+                    height={30}
                   />
                   {likedTours.length ? (
                     <span className="favorites-count">{likedTours.length}</span>
@@ -68,19 +72,21 @@ export default function Header() {
                     src="./images/icons/header/account-icon.svg"
                     className="user-menu__account-icon"
                     alt=""
+                    width={32}
+                    height={30}
                   />
                 </Link>
+                <img
+                  src="./images/icons/header/logout.svg"
+                  alt="Log out"
+                  className="logout-btn"
+                  onClick={() => handleLogout()}
+                  width={32}
+                  height={30}
+                />
               </div>
-              <Button
-                text="Log out"
-                className="header--log-btn"
-                border="2px solid #FEFEFE"
-                color="#ffffff"
-                backgroundColor="transparent"
-                padding="4px 20px"
-                click={() => handleLogout()}
-              />
             </div>
+            <BurgerMenu />
           </>
         ) : (
           <>
@@ -92,14 +98,14 @@ export default function Header() {
                     text="Log in"
                     border="2px solid #FEFEFE"
                     color="#ffffff"
+                    fontSize="13px"
                     backgroundColor="transparent"
-                    padding="4px 20px"
+                    padding="4px 10px"
                   />
                 </Link>
               )}
           </>
         )}
-        <BurgerMenu />
       </div>
     </header>
   );

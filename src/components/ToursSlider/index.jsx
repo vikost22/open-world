@@ -40,6 +40,7 @@ export default function ToursSlider(props) {
           alt="star"
           width={40}
           height={40}
+          key={i}
         />
       );
       continue;
@@ -51,6 +52,7 @@ export default function ToursSlider(props) {
         width={40}
         height={40}
         alt="star"
+        key={i}
       />
     );
   }
@@ -102,9 +104,7 @@ export default function ToursSlider(props) {
               <p className="tour-slider-item__descr">
                 {activeTour.description}
               </p>
-              <p className="tour-slider-item__more">
-                See more
-              </p>
+              <p className="tour-slider-item__more">See more</p>
             </li>
             <li
               className="tour-slider__tour-item tour-slider-item"

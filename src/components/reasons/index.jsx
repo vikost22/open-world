@@ -1,10 +1,10 @@
 export default function Reasons(props) {
-  const { reasonsImages, reasons } = props;
+  const { reasonsImages, reasons, name } = props;
   return (
     <section className="reasons">
       <h2 className="reasons__title">REASONS</h2>
       <p className="reasons__subtitle">
-        FIVE REASONS WHY YOU SHOUD VISIT VIETNAM
+        FIVE REASONS WHY YOU SHOUD VISIT {name.toUpperCase()}
       </p>
       <div className="reasons__container container">
         <ul className="reasons__left-part">

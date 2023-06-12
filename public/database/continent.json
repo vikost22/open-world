@@ -8,19 +8,22 @@
         "name": "Tian Shan, China",
         "reviewsCount": 4,
         "imageShort": "./images/continent/Asia/secondTour.png",
-        "tourId": 11
+        "tourId": 11,
+        "price": 700
       },
       {
         "name": "Tottori, Japan",
         "reviewsCount": 5,
         "imageShort": "./images/continent/Asia/firstTour.png",
-        "tourId": 12
+        "tourId": 12,
+        "price": 700
       },
       {
         "name": "Duck Lake, Vietnam",
         "reviewsCount": 5,
         "imageShort": "./images/continent/Asia/thirdTour.png",
-        "tourId": 13
+        "tourId": 13,
+        "price": 700
       }
     ]
   },
@@ -33,19 +36,22 @@
         "name": "Sydney, Australia",
         "reviewsCount": 5,
         "imageShort": "./images/continent/Australia/australiaFirst.png",
-        "tourId": 14
+        "tourId": 14,
+        "price": 700
       },
       {
         "name": "Lincoln Rock, Australia",
         "reviewsCount": 5,
         "imageShort": "./images/continent/Australia/australiaSecond.png",
-        "tourId": 15
+        "tourId": 15,
+        "price": 700
       },
       {
         "name": "Springbrook, Australia",
         "reviewsCount": 5,
         "imageShort": "./images/continent/Australia/australiaThird.png",
-        "tourId": 16
+        "tourId": 16,
+        "price": 700
       }
     ]
   },
@@ -58,19 +64,22 @@
         "name": "Alkatraz, America",
         "reviewsCount": 5,
         "imageShort": "./images/continent/America/americaThird.png",
-        "tourId": 17
+        "tourId": 17,
+        "price": 700
       },
       {
         "name": "Alaska, America",
         "reviewsCount": 5,
         "imageShort": "./images/continent/America/americaSecond.png",
-        "tourId": 18
+        "tourId": 18,
+        "price": 700
       },
       {
         "name": "Yosemite, America",
         "reviewsCount": 5,
         "imageShort": "./images/continent/America/americaFirst.png",
-        "tourId": 19
+        "tourId": 19,
+        "price": 700
       }
     ]
   }
