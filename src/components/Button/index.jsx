@@ -7,6 +7,7 @@ export function Button(props) {
           backgroundColor: props.backgroundColor,
           border: props.border,
           color: props.color,
+          fontSize: props.fontSize,
         }}
         onMouseEnter={(e) => {
           e.target.style.backgroundColor = "#FFFFCC";
@@ -16,9 +17,14 @@ export function Button(props) {
           e.target.style.backgroundColor = props.backgroundColor;
           e.target.style.color = props.color;
         }}
-        onClick={props.click}>
+        onClick={props.click}
+      >
         {props.text}
       </button>
     </>
   );
 }
+
+Button.defaultProps = {
+  fontSize: 26 + "px",
+};

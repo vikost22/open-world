@@ -1,4 +1,5 @@
 export function useValidateCountry(country) {
+  if (!country) return false;
   if (!country.countryId) return false;
   if (!country.name) return false;
   if (!country.countryDescription) return false;

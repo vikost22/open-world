@@ -208,8 +208,8 @@
     "name": "Japan",
     "countryDescription": "Japan is a captivating Southeast Asian destination known for its rich history, vibrant culture, stunning landscapes, and delicious cuisine, making it a must-visit for any traveler.",
     "backgroundImage": "./images/countries/japan/background.png",
-    "backgroundImagePage": "./images/countries/japan/background.png",
-    "backgroundImageVideo": "./images/countries/japan/background.png",
+    "backgroundImagePage": "./images/countries/japan/background-page.jpg",
+    "backgroundImageVideo": "./images/countries/japan/video-about.jpg",
     "videoLink": "./videos/vietnam.mp4",
     "bestTours": [
       {
@@ -217,7 +217,7 @@
         "description": "Embark on a captivating historical tour through Vietnam and delve into its rich past. From exploring ancient imperial citadels and pagodas to tracing the footsteps of the Vietnam War, this immersive journey will provide a profound understanding of the country's vibrant history and cultural heritage.",
         "reviewsCount": 5,
         "imageShort": "./images/countries/japan/chinso.png",
-        "imageTour": "./images/countries/japan/chinso.png",
+        "imageTour": "./images/countries/japan/tours/chino.jpg",
         "tourId": 6,
         "price": 650
       },
@@ -226,7 +226,7 @@
         "description": "The Vietnam Classic Tour 5 Days offers an exciting and unforgettable journey through Vietnam. Over the course of five days, the tour allows guests to explore the beauty and culture of this amazing country.",
         "reviewsCount": 4,
         "imageShort": "./images/countries/japan/fuji.png",
-        "imageTour": "./images/countries/japan/fuji.png",
+        "imageTour": "./images/countries/japan/tours/fuji.jpg",
         "tourId": 7,
         "price": 600
       },
@@ -235,8 +235,17 @@
         "description": "Experience the awe-inspiring beauty of Vietnam's national parks on this immersive tour. From lush jungles teeming with diverse wildlife to majestic waterfalls and breathtaking mountain landscapes, you'll be surrounded by nature's wonders at every turn, creating memories that will last a lifetime.",
         "reviewsCount": 5,
         "imageShort": "./images/countries/japan/tochigi.png",
-        "imageTour": "./images/countries/japan/tochigi.png",
+        "imageTour": "./images/countries/japan/tours/hos.png",
         "tourId": 8,
+        "price": 700
+      },
+      {
+        "name": "Chanhoi,Japan",
+        "description": "Experience the awe-inspiring beauty of Vietnam's national parks on this immersive tour. From lush jungles teeming with diverse wildlife to majestic waterfalls and breathtaking mountain landscapes, you'll be surrounded by nature's wonders at every turn, creating memories that will last a lifetime.",
+        "reviewsCount": 5,
+        "imageShort": "./images/countries/japan/chinso.png",
+        "imageTour": "./images/countries/japan/tours/chan.jpg",
+        "tourId": 9,
         "price": 700
       }
     ],
@@ -246,7 +255,7 @@
         "description": "Embark on a captivating historical tour through Vietnam and delve into its rich past. From exploring ancient imperial citadels and pagodas to tracing the footsteps of the Vietnam War, this immersive journey will provide a profound understanding of the country's vibrant history and cultural heritage.",
         "reviewsCount": 5,
         "imageShort": "./images/countries/japan/chinso.png",
-        "imageTour": "./images/countries/japan/chinso.png",
+        "imageTour": "./images/countries/japan/tours/chino.jpg",
         "tourId": 6,
         "price": 650
       },
@@ -255,7 +264,7 @@
         "description": "The Vietnam Classic Tour 5 Days offers an exciting and unforgettable journey through Vietnam. Over the course of five days, the tour allows guests to explore the beauty and culture of this amazing country.",
         "reviewsCount": 4,
         "imageShort": "./images/countries/japan/fuji.png",
-        "imageTour": "./images/countries/japan/fuji.png",
+        "imageTour": "./images/countries/japan/tours/fuji.jpg",
         "tourId": 7,
         "price": 600
       },
@@ -264,7 +273,7 @@
         "description": "Experience the awe-inspiring beauty of Vietnam's national parks on this immersive tour. From lush jungles teeming with diverse wildlife to majestic waterfalls and breathtaking mountain landscapes, you'll be surrounded by nature's wonders at every turn, creating memories that will last a lifetime.",
         "reviewsCount": 5,
         "imageShort": "./images/countries/japan/tochigi.png",
-        "imageTour": "./images/countries/japan/tochigi.png",
+        "imageTour": "./images/countries/japan/tours/hos.png",
         "tourId": 8,
         "price": 700
       },
@@ -273,7 +282,7 @@
         "description": "Experience the awe-inspiring beauty of Vietnam's national parks on this immersive tour. From lush jungles teeming with diverse wildlife to majestic waterfalls and breathtaking mountain landscapes, you'll be surrounded by nature's wonders at every turn, creating memories that will last a lifetime.",
         "reviewsCount": 5,
         "imageShort": "./images/countries/japan/chinso.png",
-        "imageTour": "./images/countries/japan/chinso.png",
+        "imageTour": "./images/countries/japan/tours/chan.jpg",
         "tourId": 9,
         "price": 700
       }

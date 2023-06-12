@@ -12,6 +12,7 @@ export default function TourItem(props) {
   const navigate = useNavigate();
   const addedToFav = useSelector((state) => state.tours.likedTours);
   const isAdded = addedToFav.find((tour) => tour.tourId === tourId);
+  const user = localStorage.getItem("user");
 
   const reviewStars = [];
   for (let i = 1; i <= 5; i++) {
@@ -38,6 +39,10 @@ export default function TourItem(props) {
     );
   }
   function toggleToFavorites() {
+    if (!user || user === "") {
+      navigate("/login");
+      return;
+    }
     if (!isAdded) {
       dispatch(addToFavorites(props));
     } else {
