@@ -3,9 +3,16 @@ import StatusRoader from "../StatusRoader";
 
 export function TourIntro(props) {
   const { item, index } = props;
-  console.log(item);
   return (
-    <section className="tour-intro" key={index}>
+    <section
+      className="tour-intro"
+      key={index}
+      style={{
+        background: `url(${item.background})`,
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}>
       <div className="intro__wrapper">
         <div className="container">
           <StatusRoader statusNumber={5} statusName="Book tour" />

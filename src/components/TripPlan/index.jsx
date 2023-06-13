@@ -7,12 +7,14 @@ export function TripPlan(props) {
         <ul className="trip-plan-list">
           {item.tripDays.map((trip, index) => (
             <li className="trip-plan-item" key={index + 2}>
-              <img
-                src={item.tripDaysImg[index]}
-                alt={`tripImg`}
-                className="trip-img"
-                key={index}
-              />
+              <div className="trip-img__wrapper">
+                <img
+                  src={item.tripDaysImg[index]}
+                  alt={`tripImg`}
+                  className="trip-img"
+                  key={index}
+                />
+              </div>
               <p className="trip-day" key={index + 3}>
                 {index + 1} day
               </p>
