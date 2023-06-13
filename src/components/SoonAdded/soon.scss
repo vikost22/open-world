@@ -1,0 +1,46 @@
+.soon-added {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include mixins.flex(column, center, center, wrap);
+  &__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__text {
+    @include mixins.textStyle(65px, 88px, 500, $accentColor);
+    text-align: center;
+    @media (max-width: 992px) {
+      font-size: 50px;
+    }
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+    @media (max-width: 600px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.go-home {
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: $accentColor;
+  animation-name: go-home;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@keyframes go-home {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

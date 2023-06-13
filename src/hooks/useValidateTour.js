@@ -1,4 +1,5 @@
 export function useValidateTour(tour) {
+    if (!tour) return false;
     if (!tour.name) return false;
     if (!tour.description) return false;
     if (!tour.reviewsCount) return false;
