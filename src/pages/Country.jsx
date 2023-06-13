@@ -6,10 +6,12 @@ import ToursSlider from "../components/ToursSlider";
 import Footer from "../components/footer";
 import Reasons from "../components/reasons";
 import { useValidateCountry } from "../hooks/useValidateCountry";
+import SoonAdded from "../components/SoonAdded";
+
 export function Country() {
   const country = useSelector((state) => state.countries.selectedCountry);
   const isValidate = useValidateCountry(country);
-  if (!isValidate) return;
+  if (!isValidate) return <SoonAdded />;
   return (
     <>
       <section
@@ -49,7 +51,7 @@ export function Country() {
       <Reasons
         reasonsImages={country.reasonsImages}
         reasons={country.reasons}
-        name = {country.name}
+        name={country.name}
       />
       <Footer />
     </>

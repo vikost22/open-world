@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import { FormWrapper } from "../FormWrapper";
 import { useState } from "react";
+
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
   password: Yup.string().required("Password is required"),
