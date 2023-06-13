@@ -62,7 +62,11 @@ export default function TourItem(props) {
     >
       <button className="tour__fav" onClick={toggleToFavorites}>
         <img
-          src={`./images/icons/countries/${isAdded ? "fav-full" : "fav"}.svg`}
+          src={
+            user && user !== ""
+              ? `./images/icons/countries/${isAdded ? "fav-full" : "fav"}.svg`
+              : "./images/icons/countries/fav.svg"
+          }
           alt=""
         />
       </button>
