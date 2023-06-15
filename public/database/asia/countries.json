@@ -15,52 +15,43 @@
         "imageShort": "./images/countries/vietnam/chin-gip.png",
         "imageTour": "./images/countries/vietnam/tours/classic.png",
         "tourId": 1,
-        "price": 650
-      },
-      {
-        "name": "SURFING TOUR 4 DAYS",
-        "description": "Embark on an unforgettable surf tour adventure as you explore breathtaking coastlines, ride epic waves, and immerse yourself in the exhilarating world of surfing. Whether you're a beginner looking to catch your first wave or an experienced surfer seeking new challenges.",
-        "reviewsCount": 5,
-        "imageShort": "./images/countries/vietnam/surfing.png",
-        "imageTour": "./images/countries/vietnam/tours/surfing.png",
-        "tourId": 2,
-        "price": 760,
-        "background": "./images/TourSection/about-background.png",
-        "title": "CATCH, YOUR, WAVE",
-        "aboutText": "Join our thrilling surf tour and dive into the world of surfing. Experience the exhilaration of riding incredible waves and embrace the beauty of the ocean.  Led by experienced guides, we'll take you to breathtaking surf destinations, offering tailored instruction for surfers of all levels. Immerse yourself in the local culture, create lifelong memories, and make the most of your surfing adventure with us.",
-        "aboutImg": "./images/TourSection/tour-about.png",
-        "locationTitle": "SURFING SPOTS",
+        "price": 650,
+        "background": "./images/TourSection/history_tour/background.png",
+        "title": "IMPROVE, YOUR, KNOWLEDGE",
+        "aboutText": "Tuan Chau Island is located in the southwest of Halong Bay. Covered with pine forests, the island, two kilometers from the mainland, with an area of 7.6 square kilometers, almost 3 kilometers long and 2 kilometers at its widest point, is best known for its two artificial beaches in the east and south - with very white and very fine sand - and entertainment.",
+        "aboutImg": "./images/TourSection/history_tour/About.jpg",
+        "locationTitle": "EXCURSION LOCATION",
         "locations": [
-          "Da Nang,Vietnam",
-          "Mui Ne,Vietnam",
-          "Nha Trang,Vietnam",
-          "Bình An,Vietnam",
-          "Vung Tau,Vietnam"
+          "Night walk",
+          "Sailing on a ship",
+          "Beach Outside the city",
+          "Amazing views",
+          "Balloon flight"
         ],
         "locationsPhoto": [
-          "./images/TourSection/location/location1.png",
-          "./images/TourSection/location/location2.png",
-          "./images/TourSection/location/location3.png",
-          "./images/TourSection/location/location4.png",
-          "./images/TourSection/location/location5.png"
+          "./images/TourSection/history_tour/location/4.jpg",
+          "./images/TourSection/history_tour/location/2.jpg",
+          "./images/TourSection/history_tour/location/3.jpg",
+          "./images/TourSection/history_tour/location/5.jpg",
+          "./images/TourSection/history_tour/location/1.jpg"
         ],
         "tripDays": [
-          "Day 1: Arrival in Vietnam and getting to know the place -Meet your surf instructor and have an orientation lesson on land. -Explore the coast and enjoy the beautiful beaches of Vietnam.",
-          "Day 2: Start learning to surf      -Start your morning by exercising and stretching to prepare for physical activity.      Continue with your instructor's surf lessons throughout the morning.      -Practice basic surf skills in shallow water to master balance and board control.",
-          "Day 3: Improve your surfing skills      -Continue your morning surf training with an instructor.      -Practice more complex maneuvers such as turns and jumping on the wave.      -Enjoy the sunset on the beach and relax after an active day.",
-          "Day 4: Yachting party at sea      After morning exercises and breakfast, go to a yachting party on the sea.      -Rent a yacht and gather your group of friends for a fun and unforgettable day.      -Enjoy crystal clear water, fresh air and beautiful views of the surrounding landscapes."
+          "Day 1: On the first day, we will drive around the city, see how people live here and get to know each other over a glass of wine, after that we will go to the night beach in the city and see wonderful views of the city and the Ferris wheel",
+          "Day 2: On the second day, we will go outside the city and will be able to appreciate the beauty of the ocean, which is truly mesmerizing with its appearance, in the evening, according to tradition, we will spend time together over a glass of sparkling wine",
+          "Day 3: On the third day we will fly in a hot air balloon and will be able to see the whole city, after that those who wish will have the opportunity to buy souvenirs at the local market"
         ],
         "tripDaysImg": [
-          "./images/TourSection/plan/1.png",
-          "./images/TourSection/plan/2.png",
-          "./images/TourSection/plan/3.png",
-          "./images/TourSection/plan/4.png"
+          "./images/TourSection/history_tour/plan/1.webp",
+          "./images/TourSection/history_tour/plan/2.jpg",
+          "./images/TourSection/history_tour/plan/3.jpg"
         ],
+        "equipmentName": "SURFBOARDS",
+        "equipmentBackground": "./images/TourSection/surf_tour/equipment/background.png",
         "equipment": ["VESL PADDLE BOARD", "PADDLE BOARD", "STANDUP BOARD"],
         "equipmentPhoto": [
-          "./images/TourSection/equipment/1.png",
-          "./images/TourSection/equipment/2.png",
-          "./images/TourSection/equipment/3.png"
+          "./images/TourSection/surf_tour/equipment/1.png",
+          "./images/TourSection/surf_tour/equipment/2.png",
+          "./images/TourSection/surf_tour/equipment/3.png"
         ],
         "reviews": [
           "I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable, tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
@@ -70,13 +61,76 @@
           "5 , tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch."
         ],
         "reviewersPhoto": [
-          "./images/TourSection/reviews/1.png",
-          "./images/TourSection/reviews/2.png",
-          "./images/TourSection/reviews/3.png",
-          "./images/TourSection/reviews/4.png",
-          "./images/TourSection/reviews/5.png"
+          "./images/TourSection/surf_tour/reviews/1.png",
+          "./images/TourSection/surf_tour/reviews/2.png",
+          "./images/TourSection/surf_tour/reviews/3.png",
+          "./images/TourSection/surf_tour/reviews/4.png",
+          "./images/TourSection/surf_tour/reviews/5.png"
         ],
-        "bookTourImg": "./images/TourSection/book/BookBack.png"
+        "bookTourImg": "./images/TourSection/history_tour/book/book.jpg"
+      },
+      {
+        "name": "SURFING TOUR 4 DAYS",
+        "description": "Embark on an unforgettable surf tour adventure as you explore breathtaking coastlines, ride epic waves, and immerse yourself in the exhilarating world of surfing. Whether you're a beginner looking to catch your first wave or an experienced surfer seeking new challenges.",
+        "reviewsCount": 5,
+        "imageShort": "./images/countries/vietnam/surfing.png",
+        "imageTour": "./images/countries/vietnam/tours/surfing.png",
+        "tourId": 2,
+        "price": 760,
+        "background": "./images/TourSection/surf_tour/about-background.png",
+        "title": "CATCH, YOUR, WAVE",
+        "aboutText": "Join our thrilling surf tour and dive into the world of surfing. Experience the exhilaration of riding incredible waves and embrace the beauty of the ocean.  Led by experienced guides, we'll take you to breathtaking surf destinations, offering tailored instruction for surfers of all levels. Immerse yourself in the local culture, create lifelong memories, and make the most of your surfing adventure with us.",
+        "aboutImg": "./images/TourSection/surf_tour/tour-about.png",
+        "locationTitle": "SURFING SPOTS",
+        "locations": [
+          "Da Nang,Vietnam",
+          "Mui Ne,Vietnam",
+          "Nha Trang,Vietnam",
+          "Bình An,Vietnam",
+          "Vung Tau,Vietnam"
+        ],
+        "locationsPhoto": [
+          "./images/TourSection/surf_tour/location/location1.png",
+          "./images/TourSection/surf_tour/location/location2.png",
+          "./images/TourSection/surf_tour/location/location3.png",
+          "./images/TourSection/surf_tour/location/location4.png",
+          "./images/TourSection/surf_tour/location/location5.png"
+        ],
+        "tripDays": [
+          "Day 1: Arrival in Vietnam and getting to know the place -Meet your surf instructor and have an orientation lesson on land. -Explore the coast and enjoy the beautiful beaches of Vietnam.",
+          "Day 2: Start learning to surf      -Start your morning by exercising and stretching to prepare for physical activity.      Continue with your instructor's surf lessons throughout the morning.      -Practice basic surf skills in shallow water to master balance and board control.",
+          "Day 3: Improve your surfing skills      -Continue your morning surf training with an instructor.      -Practice more complex maneuvers such as turns and jumping on the wave.      -Enjoy the sunset on the beach and relax after an active day.",
+          "Day 4: Yachting party at sea      After morning exercises and breakfast, go to a yachting party on the sea.      -Rent a yacht and gather your group of friends for a fun and unforgettable day.      -Enjoy crystal clear water, fresh air and beautiful views of the surrounding landscapes."
+        ],
+        "tripDaysImg": [
+          "./images/TourSection/surf_tour/plan/1.png",
+          "./images/TourSection/surf_tour/plan/2.png",
+          "./images/TourSection/surf_tour/plan/3.png",
+          "./images/TourSection/surf_tour/plan/4.png"
+        ],
+        "equipmentName": "SURFBOARDS",
+        "equipmentBackground": "./images/TourSection/surf_tour/equipment/background.png",
+        "equipment": ["VESL PADDLE BOARD", "PADDLE BOARD", "STANDUP BOARD"],
+        "equipmentPhoto": [
+          "./images/TourSection/surf_tour/equipment/1.png",
+          "./images/TourSection/surf_tour/equipment/2.png",
+          "./images/TourSection/surf_tour/equipment/3.png"
+        ],
+        "reviews": [
+          "I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable, tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "2  thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "3 I recently embarked camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "4 I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable,  The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "5 , tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch."
+        ],
+        "reviewersPhoto": [
+          "./images/TourSection/surf_tour/reviews/1.png",
+          "./images/TourSection/surf_tour/reviews/2.png",
+          "./images/TourSection/surf_tour/reviews/3.png",
+          "./images/TourSection/surf_tour/reviews/4.png",
+          "./images/TourSection/surf_tour/reviews/5.png"
+        ],
+        "bookTourImg": "./images/TourSection/surf_tour/book/BookBack.png"
       },
       {
         "name": "VIETNAM CLASSIC TOUR 4 DAYS",
@@ -85,7 +139,55 @@
         "imageShort": "./images/countries/vietnam/chanhoi.png",
         "imageTour": "./images/countries/vietnam/tours/classic.png",
         "tourId": 3,
-        "price": 600
+        "price": 600,
+        "background": "./images/TourSection/mountain_tour/introBack.jpg",
+        "title": "FEEL, NATURE, ENERGY",
+        "aboutText": "Distant and mysterious Vietnam is ideal for true gourmets of exotic travel. Its main gems are the impenetrable tropical jungle and the color of the local population. The nature here is truly extraordinary: 80% of the country lies on low mountains overgrown with lush vegetation. Corals reign in coastal waters, bays beckon with turquoise waters, golden beaches and idyllic islets. All these beauties have been preserved almost in their original form - but how to tame them? In distant villages, fruits, rice, coffee, tea, cloves, black pepper, rubber are traditionally grown on colorful terraces... The cult of ancestors and hundreds of other secret religions and scientists still lived here. The mixture of Buddhism, Confucianism, polytheism, totemism makes each village and family unique. Hiking in Vietnam is diverse, exciting and a little eccentric ;). Join in!",
+        "aboutImg": "./images/TourSection/mountain_tour/1.webp",
+        "locationTitle": "PLACES",
+        "locations": ["Ha Noi", "Bac Ha", "Ta Cu Ty", "Che La", "Mong"],
+        "locationsPhoto": [
+          "./images/TourSection/mountain_tour/location/1.jpg",
+          "./images/TourSection/mountain_tour/location/2.jpg",
+          "./images/TourSection/mountain_tour/location/3.jpg",
+          "./images/TourSection/mountain_tour/location/4.jpg",
+          "./images/TourSection/mountain_tour/location/5.jpg"
+        ],
+        "tripDays": [
+          "Day 1: The group meets the instructor in the capital of Vietnam. Let's take a walk around the city and have dinner in one of the restaurants - it's compatible to get to know Vietnamese cuisine and meet each other :). We spend the night in a hostel.",
+          "Day 2: We move to the north, to the cozy town of Bak Kha (900 meters above sea level). From here we can see the highest ridge of the country - Hoang Liên Sơn (Vietnamese: Hoàng Liên Sơn - \"main mountain range\"). In the city, many cultures and ethnic groups mixed in an amazing way: H'Mong, Dao, Nung and Hoa. In the vicinity of Bac Ha, about 10 of them live -you! And they all gather on Sundays at a huge bazaar - a market where they sell handicrafts, food, livestock... We will visit this market, we will be able to choose unique souvenirs and see a variety of national costumes. The town is also famous for the production of traditional alcoholic beverages: rice wine , cassava and corn liquor. We will definitely taste it 😉",
+          "Day 3: After breakfast, the car will take us to Ta Ku Tu village, where the hiking trail will start. The trail leads among low mountains, densely covered with wet forests. Many beautiful rivers flow here, and fertile valleys delight with an abundance of strange flowers and fruits. Along the way, we will visit ethnic villages, and all the time we will be accompanied by beautiful landscapes. For the night, we will stay in Thai homestay. Our trip to Vietnam will allow not only to get acquainted with the beautiful nature and sights of the country, but also to get to know the different cultures of its inhabitants.",
+          "Day 4: Today, silent mountains close around us. All day we walk along stony paths surrounded by stunning views. The slopes are dotted with colorful rice terraces and corn fields. Stormy rivers and streams cascade down waterfalls, raising a cloud of cool dust in the middle of the forest. In the evening, we arrive in the village of Che-La, where we spend the night with another hospitable host."
+        ],
+        "tripDaysImg": [
+          "./images/TourSection/mountain_tour/plan/1.webp",
+          "./images/TourSection/mountain_tour/plan/2.webp",
+          "./images/TourSection/mountain_tour/plan/3.webp",
+          "./images/TourSection/mountain_tour/plan/4.jpg"
+        ],
+        "equipmentName": "SURFBOARDS",
+        "equipmentBackground": "./images/TourSection/surf_tour/equipment/background.png",
+        "equipment": ["VESL PADDLE BOARD", "PADDLE BOARD", "STANDUP BOARD"],
+        "equipmentPhoto": [
+          "./images/TourSection/surf_tour/equipment/1.png",
+          "./images/TourSection/surf_tour/equipment/2.png",
+          "./images/TourSection/surf_tour/equipment/3.png"
+        ],
+        "reviews": [
+          "I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable, tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "2  thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "3 I recently embarked camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "4 I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable,  The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "5 , tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch."
+        ],
+        "reviewersPhoto": [
+          "./images/TourSection/surf_tour/reviews/1.png",
+          "./images/TourSection/surf_tour/reviews/2.png",
+          "./images/TourSection/surf_tour/reviews/3.png",
+          "./images/TourSection/surf_tour/reviews/4.png",
+          "./images/TourSection/surf_tour/reviews/5.png"
+        ],
+        "bookTourImg": "./images/TourSection/mountain_tour/book/1.webp"
       },
       {
         "name": "TOUR OF VIETNAMS INTERNATIONALS PARKS",
@@ -94,7 +196,59 @@
         "imageShort": "./images/countries/vietnam/hoshimi.png",
         "imageTour": "./images/countries/vietnam/tours/parks.png",
         "tourId": 4,
-        "price": 700
+        "price": 700,
+        "background": "./images/TourSection/international_park/introBack.jpg",
+        "title": "VISIT, SEE, ENJOY",
+        "aboutText": "Home to vivid jungles, tenacious rivers, golden coastlines and dramatic limestone mountains, Vietnam truly is an adventurer’s wonderland. The whole country boasts 34 national parks that offer tremendous diversity. Behind every mangrove tree lie cascading waterfalls and exotic wildlife that are not to be missed. Steadily becoming the gem of Southeast Asia, Vietnam ranks high on the scale of richness in biodiversity. That being said, almost half of its beautiful and almost untouched land is under forest protection.From the north of the country to the south, you can always find a tranquil place to escape the crowd. Be sure to mark these national parks in Vietnam to create your own perfect itinerary!",
+        "aboutImg": "./images/TourSection/international_park/aboutImg.jpg",
+        "locationTitle": "PARKS",
+        "locations": [
+          "Hoang Lien",
+          "Tam Dao",
+          "Xuan Son",
+          "Phia Oac – Phia Den"
+        ],
+        "locationsPhoto": [
+          "./images/TourSection/international_park/location/5.jpg",
+          "./images/TourSection/international_park/location/4.jpg",
+          "./images/TourSection/international_park/location/3.jpg",
+          "./images/TourSection/international_park/location/2.jpg"
+        ],
+        "tripDays": [
+          "Day 1 : Hoang Lien National Park is Vietnam's mountainous Northwest and includes Fansipan, the highest mountain in Vietnam and on the Indochinese Peninsula.",
+          "Day 2: Amazing place. It is located 80 kilometers north of Hanoi, at an altitude of 1,500 thousand meters above sea level. As the car drives up the serpentine road in the forest, he begins to perk up. Eventually it passes.",
+          "Day 3 :Possessing a diversified floristic composition with hundreds of plant and tree species, a range of wild rare animals and natural beautiful waterfalls and caves, Xuan Son National Park in Phu Tho Province is an ideal destination for Vietnamese and foreign visitors.",
+          "Day 4 : Phia Oac-Phia Den National Park is about 6 hours outside of Hanoi, in the Cao Bang Province, and protects nearly 26,000 acres of northeast Vietnam’s mountain region. Away from urban areas, Phia Oac-Phia Den is a remote haven for unique flora and fauna."
+        ],
+        "tripDaysImg": [
+          "./images/TourSection/international_park/plan/1.jpg",
+          "./images/TourSection/international_park/plan/2.jpg",
+          "./images/TourSection/international_park/plan/3.jpg",
+          "./images/TourSection/international_park/plan/4.jpg"
+        ],
+        "equipmentName": "SURFBOARDS",
+        "equipmentBackground": "./images/TourSection/surf_tour/equipment/background.png",
+        "equipment": ["VESL PADDLE BOARD", "PADDLE BOARD", "STANDUP BOARD"],
+        "equipmentPhoto": [
+          "./images/TourSection/surf_tour/equipment/1.png",
+          "./images/TourSection/surf_tour/equipment/2.png",
+          "./images/TourSection/surf_tour/equipment/3.png"
+        ],
+        "reviews": [
+          "I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable, tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "2  thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "3 I recently embarked camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "4 I recently embarked on a surfing tour that left me with unforgettable memories. The instructors were friendly and knowledgeable,  The camaraderie within the group was incredible, and the accommodations and facilities were top-notch.",
+          "5 , tailoring the lessons to suit all skill levels. Exploring various surf spots provided a unique and thrilling experience. The camaraderie within the group was incredible, and the accommodations and facilities were top-notch."
+        ],
+        "reviewersPhoto": [
+          "./images/TourSection/surf_tour/reviews/1.png",
+          "./images/TourSection/surf_tour/reviews/2.png",
+          "./images/TourSection/surf_tour/reviews/3.png",
+          "./images/TourSection/surf_tour/reviews/4.png",
+          "./images/TourSection/surf_tour/reviews/5.png"
+        ],
+        "bookTourImg": "./images/TourSection/international_park/book/1.jpg"
       }
     ],
     "tours": [

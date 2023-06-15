@@ -1,9 +1,5 @@
 .tour-intro {
   min-height: 100%;
-  background: url("../../../public/images/TourSection/about-background.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   &-btn__wrapper {
     text-align: center;
     padding-bottom: 60px;
@@ -13,10 +9,10 @@
   padding-top: 150px;
   background: linear-gradient(
     179.51deg,
-    #1b2920 0.42%,
+    #1e2c21 0.42%,
     rgba(38, 78, 54, 0) 37.98%,
     rgba(49, 62, 54, 0.38) 62.73%,
-    rgba(27, 42, 32, 0.99) 93.89%
+    #1e2c21 93.89%
   );
 }
 .tour-slogan {
@@ -46,9 +42,14 @@
   -webkit-text-fill-color: transparent;
 }
 .text--3d {
-  position: absolute;
   top: 3px;
-  right: 4.5px;
+  right: 4px;
+  @media (max-width: 992px) {
+    top: 2px;
+    right: 2px;
+  }
+  position: absolute;
+
   -webkit-text-fill-color: #fefefe;
 }
 .text-position-0 {
@@ -141,7 +142,6 @@
   width: 35px;
   @include mixins.flex(row, center, center, nowrap);
   cursor: pointer;
-  transition: 0.4s;
   &:hover {
     transform: scale(1.1);
   }
@@ -228,7 +228,10 @@
   }
 }
 .trip-img {
+  width: 250px;
+  height: 250px;
   margin-bottom: 50px;
+  border-radius: 55px;
 }
 .trip-day {
   @include mixins.textStyle(24px, 32px, 500, #fefefe);
@@ -240,7 +243,6 @@
 //section 5
 
 .tour-equipment {
-  background: url("../../../public/images/TourSection/equipment/background.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -260,7 +262,7 @@
 .equipment-list {
   @include mixins.flex(row, center, center, nowrap);
 }
-.equipment-img{
+.equipment-img {
   transition: 0.6s;
 }
 .equipment-img:hover {
@@ -379,6 +381,8 @@
 .book-tour-img {
   transform: scale(1.05);
   padding-left: 30px;
+  width: 500px;
+  height: 400px;
 }
 .book-tour-content__text {
   @include mixins.flex(column, center, center, nowrap);
