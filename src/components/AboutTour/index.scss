@@ -142,7 +142,6 @@
   width: 35px;
   @include mixins.flex(row, center, center, nowrap);
   cursor: pointer;
-  transition: 0.4s;
   &:hover {
     transform: scale(1.1);
   }
