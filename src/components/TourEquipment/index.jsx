@@ -5,9 +5,6 @@ export function TourEquipment(props) {
       className="tour-equipment"
       style={{
         background: `url(${item.equipmentBackground})`,
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
       }}>
       <div className="tour-equipment__wrapper">
         <h3 className="about-page-title">{item.equipmentName}</h3>

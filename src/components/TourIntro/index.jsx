@@ -9,9 +9,6 @@ export function TourIntro(props) {
       key={index}
       style={{
         background: `url(${item.background})`,
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
       }}>
       <div className="intro__wrapper">
         <div className="container">

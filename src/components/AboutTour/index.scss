@@ -1,8 +1,14 @@
 .tour-intro {
   min-height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   &-btn__wrapper {
     text-align: center;
     padding-bottom: 60px;
+  }
+  @media (max-width: 760px) {
+    background-attachment: scroll;
   }
 }
 .intro__wrapper {
@@ -14,6 +20,9 @@
     rgba(49, 62, 54, 0.38) 62.73%,
     #1e2c21 93.89%
   );
+  @media (max-width: 760px) {
+    background: none;
+  }
 }
 .tour-slogan {
   text-transform: uppercase;
@@ -216,6 +225,7 @@
   margin-top: 50px;
   @include mixins.flex(row, center, center, nowrap);
   gap: 50px;
+  padding-bottom: 40px;
   @media (max-width: 992px) {
     flex-wrap: wrap;
   }
@@ -244,9 +254,12 @@
 
 .tour-equipment {
   background-attachment: fixed;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: 50%;
+  @media (max-width: 760px) {
+    background-attachment: scroll;
+  }
   &__wrapper {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -257,6 +270,9 @@
       rgba(49, 62, 54, 0.38) 62.73%,
       #1e2c21 93.89%
     );
+    @media (max-width: 760px) {
+      background: none;
+    }
   }
 }
 .equipment-list {
