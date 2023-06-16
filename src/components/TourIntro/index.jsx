@@ -8,7 +8,7 @@ export function TourIntro(props) {
       className="tour-intro"
       key={index}
       style={{
-        background: `url(${item.background})`,
+        backgroundImage: `url(${item.background})`,
       }}>
       <div className="intro__wrapper">
         <div className="container">

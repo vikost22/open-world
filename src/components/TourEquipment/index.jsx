@@ -4,7 +4,7 @@ export function TourEquipment(props) {
     <section
       className="tour-equipment"
       style={{
-        background: `url(${item.equipmentBackground})`,
+        backgroundImage: `url(${item.equipmentBackground})`,
       }}>
       <div className="tour-equipment__wrapper">
         <h3 className="about-page-title">{item.equipmentName}</h3>
