@@ -1,13 +1,13 @@
 .tour-intro {
-  min-height: 100%;
   background-attachment: fixed;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
   &-btn__wrapper {
     text-align: center;
     padding-bottom: 60px;
   }
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     background-attachment: scroll;
   }
 }
@@ -254,12 +254,9 @@
 
 .tour-equipment {
   background-attachment: fixed;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: 50%;
-  @media (max-width: 760px) {
-    background-attachment: scroll;
-  }
   &__wrapper {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -273,6 +270,9 @@
     @media (max-width: 760px) {
       background: none;
     }
+  }
+  @media (max-width: 760px) {
+    background-attachment: scroll;
   }
 }
 .equipment-list {
